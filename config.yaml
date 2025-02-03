@@ -57,16 +57,16 @@ params:
 
 
   # home-info mode
-  # homeInfoParams:
-  #   Title: "Zero Day, Every Day\U0001F4A5"
-  #   Content: Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary.
+  homeInfoParams:
+    Title: "Zero Day, Every Day\U0001F4A5"
+    Content: Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary.
   #   image: img/avatar.jpg
 
   #Profile Mode
-  profileMode:
-    enabled: true
-    title: "Zero Day, Every Day\U0001F4A5"
-    subtitle: "Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary."
+  # profileMode:
+  #   enabled: true
+  #   title: "Zero Day, Every Day\U0001F4A5"
+  #   subtitle: "Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary."
     # imageUrl: "/img/avatar.jpg"
     # imageTitle: "test" # optional
     # imageWidth: 120 # custom size
@@ -128,9 +128,9 @@ menu:
       name: blog
       url: /blog/
       weight: 10
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: writeups
+      name: writeups
+      url: /writeups/
       weight: 15
     - identifier: tags
       name: tags

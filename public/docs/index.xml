@@ -16,18 +16,11 @@
       <description>As I sit here looking at my website going live for the first time I am overwhelmed with the possibilities this could lead to. One of my goals has been to create a blog sites and write about my interest, but now I am faced with the overwhelming question of what to write about and will anyone read it. Well in times of doubt I am reminded of a quote from the movie Field of Dreams - &amp;ldquo;If you build it they will come.</description>
     </item>
     <item>
-      <title>Example</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
-      <pubDate>Fri, 02 Feb 2024 04:14:54 -0800</pubDate>
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
-      <description>This is just a test</description>
-    </item>
-    <item>
       <title>Root Me - CTF</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
-      <description>Try Hack Me - RootMe A ctf for beginners, can you root me? Objective: Reconnaissance Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
+      <description>Try Hack Me - RootMe A ctf for beginners, can you root me? Reconnaissance Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
 nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:
 -A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
     </item>
