@@ -3,7 +3,7 @@ title = 'Root Me - CTF'
 date = 2021-02-12
 draft = false
 url = "/blog/"
-tags = ["writeup"]
+tags = ["writeup","CTF"]
 +++
 
 # Try Hack Me - RootMe
