@@ -9,7 +9,6 @@ tags = ["writeup","CTF"]
 # Try Hack Me - RootMe
 A ctf for beginners, can you root me?
 <br>
-## Objective:
 ---
 ## Reconnaissance
 1. Scan the machine, how many ports are open?
@@ -98,7 +97,24 @@ A ctf for beginners, can you root me?
 1. Find a form to upload and get a reverse shell, and find the flag.
 	In out last question we found a hidden directory.
 	Let's open up our browser and got the following `http:\\<IP>\uploads`
-{{< figure src="/img/rootme/1.png" width="200">}}
+<!--{{< figure src="/img/rootme/1.png" width="200">}}-->
+
+{{< figure img src="/img/rootme/1.png" width="200">}}
+
+.img:hover{
+    color: #424242; 
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(1.15);
+  -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari and Chrome */
+
+}
+
 	Now lets try and upload a php reverse shell.  
 	[Pentest Monkey](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) is a great resourse for us to use.
 	Now that we have our reverse shell let's add the ip address of our device into it and pick out a port we want to listen in on.
