@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CCrashZer0</title>
+    <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/</link>
+    <description>Recent content on CCrashZer0</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Jan 2025 20:52:48 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
+      <pubDate>Fri, 02 Feb 2024 04:14:54 -0800</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
+      <description>This is just a test</description>
+    </item>
+    <item>
+      <title>First Post</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
+      <pubDate>Sun, 12 Jan 2025 20:52:48 -0500</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
+      <description>As I sit here looking at my website going live for the first time I am overwhelmed with the possibilities this could lead to. One of my goals has been to create a blog sites and write about my interest, but now I am faced with the overwhelming question of what to write about and will anyone read it. Well in times of doubt I am reminded of a quote from the movie Field of Dreams - &amp;ldquo;If you build it they will come.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</guid>
+      <description>about</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
+      <description>blog</description>
+    </item>
+  </channel>
+</rss>
