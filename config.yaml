@@ -78,8 +78,8 @@ params:
         url: blog
       - name: Categories
         url: categories
-      - name: About
-        url: about
+      # - name: About
+      #   url: about
 
 
   socialIcons:
@@ -124,7 +124,7 @@ menu:
     # - identifier: about
     #   name: about
     #   url: /about/
-      # weight: 10
+    #   weight: 10
     - identifier: blog
       name: blog
       url: /blog/
