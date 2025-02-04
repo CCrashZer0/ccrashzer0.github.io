@@ -78,8 +78,8 @@ params:
         url: tags
       - name: Blog
         url: blog
-      - name: Writeups
-        url: writeups
+      - name: Categories
+        url: categories
 
   socialIcons:
     - name: x
@@ -128,9 +128,9 @@ menu:
       name: blog
       url: /blog/
       weight: 10
-    - identifier: writeups
-      name: writeups
-      url: /writeups/
+    - identifier: categories
+      name: categories
+      url: /categories/
       weight: 15
     - identifier: tags
       name: tags
