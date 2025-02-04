@@ -55,15 +55,15 @@ params:
 
 
   # home-info mode
-  homeInfoParams:
-    Title: "Zero Day, Every Day\U0001F4A5"
+  # homeInfoParams:
+  #   Title: "Zero Day, Every Day\U0001F4A5"
   #   Content: Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary.
   #   image: img/avatar.jpg
 
   #Profile Mode
-  # profileMode:
-  #   enabled: true
-  #   title: "Zero Day, Every Day\U0001F4A5"
+  profileMode:
+    enabled: true
+    title: "Zero Day, Every Day\U0001F4A5"
   #   subtitle: "Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary."
     # imageUrl: "/img/avatar.jpg"
     # imageTitle: "test" # optional
