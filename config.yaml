@@ -124,7 +124,7 @@ menu:
     # - identifier: about
     #   name: about
     #   url: /about/
-      weight: 10
+      # weight: 10
     - identifier: blog
       name: blog
       url: /blog/
