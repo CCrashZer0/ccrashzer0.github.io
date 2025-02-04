@@ -78,6 +78,9 @@ params:
         url: blog
       - name: Categories
         url: categories
+      - name: About
+        url: about
+
 
   socialIcons:
     - name: x
@@ -118,9 +121,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: about
-      name: about
-      url: /about/
+    # - identifier: about
+    #   name: about
+    #   url: /about/
       weight: 10
     - identifier: blog
       name: blog
