@@ -71,15 +71,15 @@ params:
     # imageTitle: "test" # optional
     # imageWidth: 120 # custom size
     # imageHeight: 120 # custom size
-    # buttons:
-    #   - name: Posts
-    #     url: posts
-    #   - name: Tags
-    #     url: tags
-    #   - name: Blog
-    #     url: blog
-    #   - name: Writeups
-    #     url: writeups
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+      - name: Blog
+        url: blog
+      - name: Writeups
+        url: writeups
 
   socialIcons:
     - name: x
