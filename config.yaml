@@ -70,16 +70,16 @@ params:
     # imageWidth: 120 # custom size
     # imageHeight: 120 # custom size
     buttons:
-      - name: Posts
-        url: posts
+      # - name: Posts
+      #   url: posts
       - name: Tags
         url: tags
       - name: Blog
         url: blog
       - name: Categories
         url: categories
-      # - name: About
-      #   url: about
+      - name: About
+        url: about
 
 
   socialIcons:
@@ -121,10 +121,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    # - identifier: about
-    #   name: about
-    #   url: /about/
-    #   weight: 10
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
     - identifier: blog
       name: blog
       url: /blog/
