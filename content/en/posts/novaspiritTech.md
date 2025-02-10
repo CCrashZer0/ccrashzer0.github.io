@@ -1,6 +1,6 @@
 +++
 title = 'NovaspiritTech'
-date = 2025-02-07T17:33:24:00:00
+date = 2025-02-7T15:52:48-05:00
 draft = false
 url = "/posts/"
 +++
