@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/</loc>
-    <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/docs/</loc>
-    <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</loc>
-    <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/</loc>
-    <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/thoughts/</loc>
-    <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</loc>
-    <lastmod>2025-02-03T22:26:54-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</loc>
-    <lastmod>2025-01-12T20:52:48-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/ctf/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/writeup/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categories/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/en-gb/sitemap.xml</loc>
+    
+      <lastmod>2025-02-07T17:33:24+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/de-de/sitemap.xml</loc>
+    
+      <lastmod>2024-03-04T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/fr-fr/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/pt-br/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/ru-ru/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/it/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
