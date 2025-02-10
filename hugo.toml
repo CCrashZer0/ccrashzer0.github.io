@@ -42,10 +42,10 @@ theme = "hugo-blog-awesome"
     noClasses = false
   [markup.goldmark.renderer]
     unsafe = true
-	[markup.tableOfContents]
-		startLevel = 2 # ToC starts from H2
-		endLevel = 4 # ToC ends at H4
-		ordered = false # generates <ul> instead of <ol>
+	# [markup.tableOfContents]
+	# 	startLevel = 2 # ToC starts from H2
+	# 	endLevel = 4 # ToC ends at H4
+	# 	ordered = false # generates <ul> instead of <ol>
 
 ############################## English language ################################
 [Languages.en-gb]
@@ -447,13 +447,13 @@ theme = "hugo-blog-awesome"
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/hugo-sid"
+url = "https://github.com/CCrashZer0"
 
 [[params.socialIcons]]
-name = "twitter"
-url = "https://twitter.com"
+name = "X"
+url = "https://x.com/CCrashZer0/status/1382535159564660740"
 
-[[params.socialIcons]]
-name = "Rss"
-url = "/index.xml"
+# [[params.socialIcons]]
+# name = "Rss"
+# url = "/index.xml"
 
