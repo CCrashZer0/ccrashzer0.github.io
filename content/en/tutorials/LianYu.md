@@ -1,5 +1,10 @@
-Status: #complete 
-Tags: [[CTF]] [[writeup]] [[infosec]]
++++
+title = 'Rootme'
+date = 2025-02-20T23:31:01-05:00
+draft = false
+url = "/tutorials/"
++++
+
 
 # Try Hack Me - Lian_Yu
 A beginner level security challenge
