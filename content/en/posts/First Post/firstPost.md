@@ -1,6 +1,6 @@
 +++
-title = 'First Post'
-date = 2025-01-12T20:52:48-05:00 
+title = "First Post"
+date = "2025-01-12"
 draft = false
 url = "/posts/"
 +++
