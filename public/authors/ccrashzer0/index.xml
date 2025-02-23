@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CCrashZer0</title>
+    <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/authors/ccrashzer0/</link>
+    <description>Recent content on CCrashZer0</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/authors/ccrashzer0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</guid>
+      <description>About CCrashZer0 Link to heading A jack of all trades and a master of none, but often times better then a master of one. &amp;ndash; William Shakespeare&#xA;This quote has always resonated with me and I find its perfect for introducing myself. Hi, I&amp;rsquo;m CCrashZer0, you could describe me as a cyber security enthusiast, ethical hacker, mentor, and maker. My passions has many depths, whether it&amp;rsquo;s security research, developing scripts, 3d printing, or accepting a new challenges.</description>
+    </item>
+    <item>
+      <title>First Post</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/firstpost/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/firstpost/</guid>
+      <description>As I sit here looking at my website going live for the first time I am overwhelmed with the possibilities this could lead to. One of my goals has been to create a blog sites and write about my interest, but now I am faced with the overwhelming question of what to write about and will anyone read it. Well in times of doubt I am reminded of a quote from the movie Field of Dreams - &amp;ldquo;If you build it they will come.</description>
+    </item>
+  </channel>
+</rss>

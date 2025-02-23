@@ -1,46 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/en-gb/sitemap.xml</loc>
-    
-      <lastmod>2025-02-07T17:33:24+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/de-de/sitemap.xml</loc>
-    
-      <lastmod>2024-03-04T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/fr-fr/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/pt-br/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/ru-ru/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/it/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/blog/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/novaspirittech/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/authors/ccrashzer0/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/firstpost/</loc>
+    <lastmod>2025-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/authors/</loc>
+    <lastmod>2023-01-05T01:15:52+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/autores/autores-de-hugo/</loc>
+    <lastmod>2023-01-05T01:15:52+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/authors/hugo-authors/</loc>
+    <lastmod>2023-01-05T01:15:29+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categories/</loc>
+    <lastmod>2023-01-04T23:21:18+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/temas/</loc>
+    <lastmod>2023-01-04T23:21:18+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/sintaxe/</loc>
+    <lastmod>2023-01-04T23:21:06+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/shortcodes/_index.pt-br/</loc>
+    <lastmod>2023-01-04T11:51:36+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/</loc>
+    <lastmod>2023-01-04T11:51:36+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about.pt-br/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/series/</loc>
+  </url>
+</urlset>

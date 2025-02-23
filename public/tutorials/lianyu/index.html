@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Lian Yu · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Try Hack Me - Lian_Yu Link to heading A beginner level security challenge
+Objectives Link to heading Deploy the VM and Start the Enumeration. What is the Web Directory you found? What is the file name you found? What is the FTP Password? What is the file name with SSH password? user.txt root.txt Recon, Scanning, and Enumeration Link to heading Once the VM has been launched I am going to start scanning the box.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lian Yu">
+  <meta name="twitter:description" content="Try Hack Me - Lian_Yu Link to heading A beginner level security challenge
+Objectives Link to heading Deploy the VM and Start the Enumeration. What is the Web Directory you found? What is the file name you found? What is the FTP Password? What is the file name with SSH password? user.txt root.txt Recon, Scanning, and Enumeration Link to heading Once the VM has been launched I am going to start scanning the box.">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Lian Yu">
+  <meta property="og:description" content="Try Hack Me - Lian_Yu Link to heading A beginner level security challenge
+Objectives Link to heading Deploy the VM and Start the Enumeration. What is the Web Directory you found? What is the file name you found? What is the FTP Password? What is the file name with SSH password? user.txt root.txt Recon, Scanning, and Enumeration Link to heading Once the VM has been launched I am going to start scanning the box.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2025-02-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-20T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/">
+          Lian Yu
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="try-hack-me---lian_yu">
+  Try Hack Me - Lian_Yu
+  <a class="heading-link" href="#try-hack-me---lian_yu">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>A beginner level security challenge</p>
+<hr>
+<h2 id="objectives">
+  Objectives
+  <a class="heading-link" href="#objectives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>Deploy the VM and Start the Enumeration.</li>
+<li>What is the Web Directory you found?</li>
+<li>What is the file name you found?</li>
+<li>What is the FTP Password?</li>
+<li>What is the file name with SSH password?</li>
+<li>user.txt</li>
+<li>root.txt</li>
+</ol>
+<hr>
+<h2 id="recon-scanning-and-enumeration">
+  Recon, Scanning, and Enumeration
+  <a class="heading-link" href="#recon-scanning-and-enumeration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Once the VM has been launched I am going to start scanning the box.<br>
+Command: <code>nmap -T4 -sC -sV -oN nmap\scan.txt &lt;ipaddress&gt;</code>
+Command Breakdown:</p>
+<pre tabindex="0"><code>    -T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+    -sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+    -sV: Attempts to determine the version of the service running on port
+
+    -oN: Normal output to the file normal.file
+</code></pre><p>NMAP Results:</p>
+<pre tabindex="0"><code class="language-NMAP" data-lang="NMAP">Host is up (0.12s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE VERSION
+21/tcp  open  ftp     vsftpd 3.0.2
+22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 56:50:bd:11:ef:d4:ac:56:32:c3:ee:73:3e:de:87:f4 (DSA)
+|   2048 39:6f:3a:9c:b6:2d:ad:0c:d8:6d:be:77:13:07:25:d6 (RSA)
+|   256 a6:69:96:d7:6d:61:27:96:7e:bb:9f:83:60:1b:52:12 (ECDSA)
+|_  256 3f:43:76:75:a8:5a:a6:cd:33:b0:66:42:04:91:fe:a0 (ED25519)
+80/tcp  open  http    Apache httpd
+|_http-server-header: Apache
+|_http-title: Purgatory
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          38570/tcp6  status
+|   100024  1          42067/tcp   status
+|   100024  1          53744/udp   status
+|_  100024  1          59897/udp6  status
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre><p>Based on our NMAP results we are able to see that thereis a web service that is open. So lets the IP address of our box and put it into our browswer and see what comes up.</p>
+<p><figure><img src="/images/LianYu/homepage.png" width="200">
+</figure>
+
+<br>
+The homepage that we are precented with gives us a little back store on who Oliver Queen but that is about it.<br>
+So lets check out the source code of this page and see if we are able to find any additional clues.<br>
+Their doesn&rsquo;s seem to be anything usefull on this page.
+<figure><img src="/images/LianYu/homePageSourceCode.png%20" width="200">
+</figure>
+</p>
+<p>How about we fire up GoBuster and see if there is anything creeping below the surface of this site.
+Command: <code>gobuster dir -u http://&lt;ip&gt; -t 40 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt</code></p>
+<p>Command Breakdown:</p>
+<pre tabindex="0"><code>    dir: Specify that you want to search for dictories.
+
+    -u: Full URL (including scheme), or base domain name.
+
+    -t: Declare the amount of threds you want to use.
+
+    -w: Path to the wordlist used for brute forcing (use – for stdin).
+</code></pre><p><figure><img src="/images/LianYu/gbIsland.png" width="200">
+</figure>
+
+It seems that where able to locat another directory. So lets go back to our broswer and see if we are able to navagate to it.</p>
+<p><figure><img src="/images/LianYu/island.png" width="200">
+</figure>
+
+The <code>island</code> urls is accessible by our browser and it seem that they where not expecting us.<br>
+It seems that our next hit is to got to Lian_Yu and we are going to need a code word in order to get in. Let&rsquo;s check out the source code to see it we can find this code word.<br>
+I think that we have found our code word and it looks like the tried to hit it plan site. Cleaver!
+<figure><img src="/images/LianYu/islandSouceCode.png" width="200">
+</figure>
+</p>
+<p>Let&rsquo;s take a look at the hit that TryHackMe gives us.<br>
+<figure><img src="/images/LianYu/Hint2.png" width="200">
+</figure>
+</p>
+<p>Our hit is &ldquo;In numbers&rdquo;. After digging around on the internet a bit I was able to find the  <a href="https://github.com/danielmiessler/SecLists"  class="external-link" target="_blank" rel="noopener">SecLists</a> repo maintained by Daniel Miessler, Jason Haddix, and g0tmi1k.<br>
+So I quickly did a git clone of the repository and decided to use one of the Fuzzing word list in combnation with GoBuster.<br>
+Command: <code>gobuster dir -u http://&lt;ip&gt;/island -t 40 -w /usr/share/dirbuster/wordlists/SecLists/Fuzzing/4-digits-0000-9999.txt</code>
+<br></p>
+<p><figure><img src="/images/LianYu/2100.png" width="200">
+</figure>
+
+It seems that there is an addittional directory.<br>
+Now we are going to navgate to that site and see if we can find the next clue.<br>
+It would seem that the only thing that we have on this site is just a YouTube clip explaning more about Oliver Queen.</p>
+<br>
+<p><figure><img src="/images/LianYu/ytClip.png" width="200">
+</figure>
+
+Just like the previous sties that we had found we are going to check the source code and see what we are able to find.</p>
+<p><figure><img src="/images/LianYu/ticket.png" width="200">
+</figure>
+
+At first glance it does not seem like anything in this codes is out of place but the more I looked at it the more the comment seemed out of place.<br>
+So I went back to our dear friend GoBuster and had it checked for <code>.ticket</code> extentions.<br>
+Command: <code>gobuster dir -u http://&lt;ip&gt;/island/2100 -T 40 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x .ticket</code><br>
+<figure><img src="/images/LianYu/gbTicket.png" width="200">
+</figure>
+</p>
+<br>
+When we go to open up the `green_arrow.ticket` in our browser we are given what looks like it could be an encoded password.  
+<figure><img src="/images/LianYu/greenArrowURL.png" width="200">
+</figure>
+
+Now if I had to guess I would say that this some form a base encoded string. Let's head over to [CyberCheft](https://github.com/danielmiessler/SecLists) and see kind of resutls we will get when we run it though each base version.  
+<br>
+The only one that I was able to any readiable results from was `Base58`.  
+It is possible that we now have a username and password combonation.. but to what it the exact question.
+<figure><img src="/images/LianYu/decodedPass.png" width="200">
+</figure>
+
+<p>If we look back at our <code>nmap</code> scans that when did at the begining of this challene, remember that we had both an FTP and an SSH port open.<br>
+Port 21 our FTP port<br>
+Port 22 is our SSH port</p>
+<h2 id="compromise">
+  Compromise
+  <a class="heading-link" href="#compromise">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<p>So we are going to use that username and password that we found and try to log into each port with them. Starting with the FTP.<br>
+Command: <code>ftp &lt;ip address&gt;</code><br>
+<figure><img src="/images/LianYu/ftp.png" width="200">
+</figure>
+</p>
+<p>Looks like we are able to log into FTP with the credentials that we found earlier.
+Now if we use our <code>ls</code> command we will be able to see if there is anything that it being stored around here.<br>
+Seems like we have a couplet of images that are just laying around. Let&rsquo;s go ahead and <a href="https://kb.globalscape.com/KnowledgebaseArticle10407.aspx"  class="external-link" target="_blank" rel="noopener">copy</a> them ot our local computer so can check them out later.<br>
+Command: <code>mget *.*</code></p>
+<p>No that our images are downloaded lets see if their is anything use around.<br>
+Let&rsquo;s go up a directory using the <code>cd ..</code> commade.<br>
+It seem that there are more users on this server then just the one that we had found.<br>
+I tried to change into that directory but was unsuccessful, so we will return to it later.<br>
+<figure><img src="/images/LianYu/slade.png" width="200">
+</figure>
+</p>
+<p>We are now going to take a look at the images that we downloaded while logged into the FTP server.<br>
+The first image that we are going to look into is <code>Leave_me_alone.png</code>.<br>
+When we use the command of <code>file Leave_me_alone.png</code> you can see that the results come back and say that the file type is data and not png.<br>
+<figure><img src="/images/LianYu/fileLeave.png" width="200">
+</figure>
+</p>
+<p>This leads me to believe that there could be something wrong with this file.<br>
+We can use  hexeditor to view the header information of out image and see if it is correct.<br>
+Here is a nice <a href="https://digital-forensics.sans.org/media/hex_file_and_regex_cheat_sheet.pdf"  class="external-link" target="_blank" rel="noopener">cheat sheet</a> that breaks down what the header should be for an png image.</p>
+<p>If you compare the header of the image to the cheet sheet you can see that the header for this png file is not correct.<br>
+So we are going to changed it to <code>89 50 4E 47</code>, save the changes and then try and open the image.<br>
+<figure><img src="/images/LianYu/hex.png" width="200">
+</figure>
+
+Once we try and open up the <code>Leave_me_alone.png</code> image you will need that it actually opens up this time around.</p>
+<p><figure><img src="/images/LianYu/zipPass.png" width="200">
+</figure>
+
+Since this image has so kindly provided us with a password we need to checked out the other imaged and see it they are hidding anything as well.<br>
+Command: <code>steghide info aa.jpg</code><br>
+<figure><img src="/images/LianYu/steghideInfo.png" width="200">
+</figure>
+
+Now that we have extracted the zip file from our image lets go ahead and unzip that file as well.<br>
+Command: <code>unzip ss.zip</code></p>
+<p>It looks like two files where extracted. Lets cat out the content of each file and see what awaits us.
+<figure><img src="/images/LianYu/passwd.txt.png" width="200">
+</figure>
+
+Well this does not look like a password at all but it does provide us with a nice little warning about what waits for us when we finally get to Lian Yu.</p>
+<p>This time we are going to take a look at our next file.<br>
+It seems that the content of this file could be yet another password.<br>
+So we have a password but what it the username to go along with it an most importantly do we need to log into.</p>
+<figure><img src="/images/LianYu/shado.png" width="200">
+</figure>
+
+<p>There is only one other port avaiable that we could try and log into this time around. We are going to try and log into our SSH port this time.<br>
+Command: <code>ssh &lt;username&gt;@&lt;ipaddress&gt;</code></p>
+<p>At this moment in the challenge it helps if you know anything about the TV show Arrow. I was able to pull on my knowlege of the show and figure out the username for SSH by a litte bit of luck and some well placed hints.<br>
+The first hint would be the name of the other directory that we saw when logged into under the FTP account.<br>
+Our second hing would have been the image that we had to correct the header on.<br>
+So I toke the name of that character and used it in our SSH command and combined it with the content of the shado file and then &hellip; BOOM!!<br>
+<figure><img src="/images/LianYu/LianYu.png" width="200">
+</figure>
+
+As soon as I got logged in I used the <code>ls</code> command and I was given out <code>user.txt</code> file and then I used the <code>cat</code> command to receive the content of that file as well.<br>
+Just like that we were able to find our user flag.<br>
+<figure><img src="/images/LianYu/user.txt.png" width="200">
+</figure>
+</p>
+<h2 id="privilege-escalation">
+  Privilege escalation
+  <a class="heading-link" href="#privilege-escalation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<p>Now that we have found our user flag the next thing that we will need to do is try and find a to escalation our privileges from the slade user to a root user.<br>
+Lets see what we are able to run on this box that does not require the root password.<br>
+Command: <code>Sudo -l</code><br>
+<figure><img src="/images/LianYu/sudo.png" width="200">
+</figure>
+
+It looks like we are able to run the <code>pkexec</code> file without being prompted for a root password.<br>
+While researching possible ways to exploite pkexec I came across an article <a href="%22https://unix.stackexchange.com/questions/421853/one-prompt-pkexec-two-command%22" >here</a> and it gave an an idea to see if I could call a bash shell from pkexec.<br>
+Command: <code>sudo /usr/bin/pkexec /bin/bash</code><br>
+<figure><img src="/images/LianYu/rootShell.png" width="200">
+</figure>
+
+<br>
+I was able to successfully gain a root shell and now we need to find out <code>root.txt</code> file.
+So lets poke around in our root directory and see if we are able to find it.<br>
+Using our <code>ls /root</code> command we are able to find the root.txt file.<br>
+Now we will need to receive the content of that file.<br>
+<figure><img src="/images/LianYu/root.png" width="200">
+</figure>
+
+<br></p>
+<h1 id="congratulations-you-have-just-completed-the-lian-yu-challenge">
+  Congratulations you have just completed the Lian Yu challenge!
+  <a class="heading-link" href="#congratulations-you-have-just-completed-the-lian-yu-challenge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

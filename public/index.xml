@@ -1,92 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Awesome Hugo blog</title>
+    <title>CCrashZer0</title>
     <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/</link>
-    <description>Recent content in Home on Awesome Hugo blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Fri, 07 Feb 2025 17:33:24 +0000</lastBuildDate><atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content on CCrashZer0</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Don-Novaspirit Tech</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
-      <pubDate>Fri, 07 Feb 2025 17:33:24 +0000</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
-      
-      <description>February 4 was a day of silence and sorrow as I received the heartbreaking news that Don from NovaSpirit Tech had passed away after his battle with cancer.
-Though I never had the privilege of knowing Don personally, his channel played a significant role in shaping my journey as a maker. His passion, creativity, and willingness to share his knowledge helped me nurture and develop my own skills, both as a hobbyist and a professional.</description>
-      
+      <title>Lian Yu</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</guid>
+      <description>Try Hack Me - Lian_Yu Link to heading A beginner level security challenge&#xA;Objectives Link to heading Deploy the VM and Start the Enumeration. What is the Web Directory you found? What is the file name you found? What is the FTP Password? What is the file name with SSH password? user.txt root.txt Recon, Scanning, and Enumeration Link to heading Once the VM has been launched I am going to start scanning the box.</description>
     </item>
-    
+    <item>
+      <title>NovaspiritTech</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/novaspirittech/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/novaspirittech/</guid>
+      <description>February 4 was a day of silence and sorrow as I received the heartbreaking news that Don from NovaSpirit Tech had passed away after his battle with cancer.&#xA;Though I never had the privilege of knowing Don personally, his channel played a significant role in shaping my journey as a maker. His passion, creativity, and willingness to share his knowledge helped me nurture and develop my own skills, both as a hobbyist and a professional.</description>
+    </item>
+    <item>
+      <title>Root Me</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</guid>
+      <description>Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.&#xA;nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:&#xA;-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
+    </item>
     <item>
       <title>About me</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</link>
-      <pubDate>Mon, 03 Feb 2025 22:26:54 -0500</pubDate>
-      
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</guid>
-      
-      <description>About CCrashZer0 A jack of all trades and a master of none, but often times better then a master of one. &amp;ndash; William Shakespeare
-This quote has always resonated with me and I find its perfect for introducing myself. Hi, I&amp;rsquo;m CCrashZer0, you could describe me as a cyber security enthusiast, ethical hacker, mentor, and maker. My passions has many depths, whether it&amp;rsquo;s security research, developing scripts, 3d printing, or accepting a new challenges.</description>
-      
+      <description>About CCrashZer0 Link to heading A jack of all trades and a master of none, but often times better then a master of one. &amp;ndash; William Shakespeare&#xA;This quote has always resonated with me and I find its perfect for introducing myself. Hi, I&amp;rsquo;m CCrashZer0, you could describe me as a cyber security enthusiast, ethical hacker, mentor, and maker. My passions has many depths, whether it&amp;rsquo;s security research, developing scripts, 3d printing, or accepting a new challenges.</description>
     </item>
-    
     <item>
       <title>First Post</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
-      <pubDate>Sun, 12 Jan 2025 20:52:48 -0500</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
-      
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/firstpost/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/firstpost/</guid>
       <description>As I sit here looking at my website going live for the first time I am overwhelmed with the possibilities this could lead to. One of my goals has been to create a blog sites and write about my interest, but now I am faced with the overwhelming question of what to write about and will anyone read it. Well in times of doubt I am reminded of a quote from the movie Field of Dreams - &amp;ldquo;If you build it they will come.</description>
-      
     </item>
-    
     <item>
-      <title>Rich Content</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/rich-content/</link>
-      <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/rich-content/</guid>
-      
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
-      
+      <title>Autores de Hugo</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/autores/autores-de-hugo/</link>
+      <pubDate>Thu, 05 Jan 2023 01:15:52 +0100</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/autores/autores-de-hugo/</guid>
+      <description></description>
     </item>
-    
     <item>
-      <title>Placeholder Text</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/placeholder-text/</link>
-      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/placeholder-text/</guid>
-      
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
-      
+      <title>temas</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/temas/</link>
+      <pubDate>Wed, 04 Jan 2023 23:21:18 +0100</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/temas/</guid>
+      <description></description>
     </item>
-    
     <item>
-      <title>Emoji Support</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/emoji-support/</link>
-      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/emoji-support/</guid>
-      
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-      
+      <title>sintaxe</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/sintaxe/</link>
+      <pubDate>Wed, 04 Jan 2023 23:21:06 +0100</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/categoria/sintaxe/</guid>
+      <description></description>
     </item>
-    
     <item>
-      <title>Root Me - CTF</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</link>
-      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/blog/</guid>
-      
-      <description>Try Hack Me - RootMe A ctf for beginners, can you root me? Reconnaissance Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
-nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:
--A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
-      
+      <title>Códigos curtos</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/shortcodes/_index.pt-br/</link>
+      <pubDate>Wed, 04 Jan 2023 11:51:36 +0100</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/shortcodes/_index.pt-br/</guid>
+      <description></description>
     </item>
-    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about.pt-br/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about.pt-br/</guid>
+      <description>Escrito em Go, Hugo é um gerador de sites estáticos de código aberto disponível sobre a licença Apache Licence 2.0. O Hugo suporta TOML, YAML e JSON como arquivos de dados, Markdown e HTML como arquivos de conteúdo, e usa shortcodes para adicionar conteúdos ricos. Outras funcionalidades notaveis são taxonomias, modo multilingual, processamento de imagens, formatos de saída customizaveis, minificação de HTML/CSS/JS e suporte a fluxos SASS/SCSS.&#xA;O Hugo faz o uso de vários projetos de código aberto incluíndo:</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</guid>
+      <description>Follow me, @johndoe.</description>
+    </item>
+    <item>
+      <title>Contato</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/contact/</guid>
+      <description>Me siga em @joaoninguem.</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</guid>
+      <description>Nothing to see here&amp;hellip; Move along!</description>
+    </item>
+    <item>
+      <title>Projetos</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</guid>
+      <description>Nada para ver aqui.. Circulando!</description>
+    </item>
   </channel>
 </rss>

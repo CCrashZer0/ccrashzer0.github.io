@@ -1,464 +1,233 @@
-title = "Awesome Hugo blog"
 baseURL = 'https://github.com/CCrashZer0/ccrashzer0.github.io/'
-
-# This is what goes in <html lang="">
-languageCode = 'en-us'
-
-# This defines how dates are formatted
-defaultContentLanguage = "en-gb"
-
-# Enable emojis globally
+title = "CCrashZer0"
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
 enableEmoji = true
-ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
 
-# traditional way: theme component resides in directory 'themes' 
-theme = "hugo-blog-awesome"
-
-# modern way: pull in theme component as hugo module
-#[module]
-  # Uncomment the next line to build and serve using local theme clone declared in the named Hugo workspace:
-  # workspace = "hugo-blog-awesome.work"
-  #[module.hugoVersion]
-    #extended = true
-    #min = "0.87.0"
-  #[[module.imports]]
-    #path = "github.com/hugo-sid/hugo-blog-awesome"
-    #disable = false
+[pagination]
+pagerSize = 6
 
 [services]
-# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
-# To disable Google Analytics, simply leave the field empty or remove the next two lines
-  [services.googleAnalytics]
-    id = '' # G-MEASUREMENT_ID
+[services.disqus]
+# Enable Disqus comments
+# shortname = "yourdiscussshortname"
 
-# To enable Disqus comments, provide Disqus Shortname below.
-# To disable Disqus comments, simply leave the field empty or remove the next two lines
-  [services.disqus]
-    shortname = ''
-
-# set markup.highlight.noClasses=false to enable code highlight
 [markup]
-  [markup.highlight]
-    noClasses = false
-  [markup.goldmark.renderer]
-    unsafe = true
-	[markup.tableOfContents]
-		startLevel = 2 # ToC starts from H2
-		endLevel = 4 # ToC ends at H4
-		ordered = false # generates <ul> instead of <ol>
+[markup.highlight]
+noClasses = false
 
-############################## English language ################################
-[Languages.en-gb]
-  languageName = "English"
-  languageCode = "en-gb"
-  contentDir = "content/en"
-  weight = 1
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
-  [Languages.en-gb.menu]
-  [[Languages.en-gb.menu.main]]
-    # The page reference (pageRef) is useful for menu highlighting
-    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-    pageRef="/"
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[Languages.en-gb.menu.main]]
-    pageRef="posts"
-    name = 'Posts'
-    url = '/posts/'
-    weight = 20
-  [[Languages.en-gb.menu.main]]
-    pageRef="about"
-    name = 'About'
-    url = '/about/'
-    weight = 30
-  [[Languages.en-gb.menu.main]]
-    pageRef="tutorials"
-    name = 'Tutorials'
-    url = '/tutorials/'
-    weight = 40
-  [[Languages.en-gb.menu.main]]
-    pageRef="cv"
-    name = 'CV'
-    url = '/cv/'
-    weight = 50
+[params]
+author = "CCrashZer0"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary."
+keywords = "blog,developer,personal"
+info = ["Security Researcher,", "Mentor,", "Maker"]
+avatarURL = "images/avatar.png"
+#gravatar = "john.doe@example.com"
+dateFormat = "January 2, 2006"
+since = 2019
+# Git Commit in Footer, uncomment the line below to enable it
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+# Right To Left, shift content direction for languages such as Arabic
+rtl = false
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "auto"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = false
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = []
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
 
-[Languages.en-gb.params]
-  sitename = "Awesome hugo blog"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Minimal Hugo blog theme with light and dark mode support"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# Custom JS
+customJS = []
 
-[Languages.en-gb.params.author]
-  avatar = "avatar.png" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Zero Day, Every Day\U0001F4A5"
-  name = "CCrashZer0"
-  description = "Unmasking vulnerabilities before they unmask you. Your daily dose of cyber security expertise with a side of sharp commentary."
+# Custom remote JS files
+customRemoteJS = []
 
-# Allow to override webmanifest options
-[Languages.en-gb.params.webmanifest]
-  name = "ccrashzer0.tech" # will use "params.sitename" or "title" by default
-  short_name = "ccrashzer0" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+# [params.fathomAnalytics]
+# siteID = "ABCDE"
+# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
 
-############################## Italian language ################################
-[Languages.it]
-  languageName = "Italian"
-  languageCode = "it"
-  contentDir = "content/it"
-  weight = 2
-  [Languages.it.menu]
-  [[Languages.it.menu.main]]
-    # The page reference (pageRef) is useful for menu highlighting
-    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-    pageRef="/"
-    name = 'Inizio'
-    url = '/'
-    weight = 10
-  [[Languages.it.menu.main]]
-    pageRef="posts"
-    name = 'Articoli'
-    url = '/posts/'
-    weight = 20
-  [[Languages.it.menu.main]]
-    pageRef="about"
-    name = 'Chi Sono'
-    url = '/about/'
-    weight = 30
+# If you want to use plausible(https://plausible.io) for analytics, add this section
+# [params.plausibleAnalytics]
+# domain = "example.com"
+# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
+# outboundLinksTracking = true
+# fileDownloadsTracking = true
 
-[Languages.it.params]
-  sitename = "Awesome hugo blog"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Un tema Hugo veloce e minimalista con supporto per la modalità chiara e scura, per la gestione di un sito o di un blog personale"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "2 January 2006" # default date format used on various pages
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
+# [params.goatCounter]
+# code = "code"
 
-[Languages.it.params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "Un tema Hugo veloce e minimalista con supporto per la modalità chiara e scura, per la gestione di un sito o di un blog personale."
+# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
+# [params.cloudflare]
+# token = "token"
 
-# Allow to override webmanifest options
-[Languages.it.params.webmanifest]
-  name = "sitename" # will use "params.sitename" or "title" by default
-  short_name = "sitename" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
+# If you want to use Matomo(https://matomo.org) for analytics, add this section
+# [params.matomo]
+# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
+# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
 
-############################## Russian language ################################
-[Languages.ru-ru]
-  languageName = "Russian"
-  languageCode = "ru-ru"
-  contentDir = "content/ru"
-  weight = 1
+# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
+# [params.googleTagManager]
+# id = "gid"
 
-  [Languages.ru-ru.menu]
-  [[Languages.ru-ru.menu.main]]
-    # The page reference (pageRef) is useful for menu highlighting
-    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-    pageRef="/"
-    name = 'Главная'
-    url = '/'
-    weight = 10
-  [[Languages.ru-ru.menu.main]]
-    pageRef="posts"
-    name = 'Записи'
-    url = '/posts/'
-    weight = 20
-  [[Languages.ru-ru.menu.main]]
-    pageRef="about"
-    name = 'О проекте'
-    url = '/about/'
-    weight = 30
+# If you want to use Yandex Metrika(https://metrika.yandex.ru) for analytics, add this section
+# [params.yandexMetrika]
+# id = "gid"
 
-[Languages.ru-ru.params]
-  sitename = "Превосходный hugo блог"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Минималистичная тема для блога на Hugo с поддержкой светлого и тёмного режима"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# If you want to use Application Insights(https://azure.com/) for analytics, add this section
+# [params.applicationInsights]
+# connectionString = "connectionString"
 
-[Languages.ru-ru.params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Превосходный hugo блог"
-  name = "Sidharth R"
-  description = "Быстрая, минималистичная тема для Hugo с поддержкой светлого и тёмного режима для использования на персональных сайтах и блогах."
+# If you want to use microanalytics.io for analytics, add this section
+# [params.microAnalytics]
+# id = "ABCDE"
+# dnt = "false" # respect DNT tracker, "true" by default
 
-# Allow to override webmanifest options
-[Languages.ru-ru.params.webmanifest]
-  name = "sitename" # will use "params.sitename" or "title" by default
-  short_name = "sitename" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
+# If you want to use Pirsch(https://pirsch.io) for analytics, add this section
+# [params.pirsch]
+# code = "ABCDE"
 
-############################## French language ################################
-[Languages.fr-fr]
-  languageName = "French"
-  languageCode = "fr-fr"
-  contentDir = "content/fr"
-  weight = 1
+# If you want to use Umami(https://umami.is) for analytics, add this section
+# [params.umami]
+# siteID = "ABCDE"
+# scriptURL = "analytics.REGION.umami.is/SCRIPTNAME.js"
 
-  [Languages.fr-fr.menu]
-  [[Languages.fr-fr.menu.main]]
-    pageRef="/"
-    name = 'Accueil'
-    url = '/'
-    weight = 10
-  [[Languages.fr-fr.menu.main]]
-    pageRef="posts"
-    name = 'Articles'
-    url = '/posts/'
-    weight = 20
-  [[Languages.fr-fr.menu.main]]
-    pageRef="about"
-    name = 'À propos'
-    url = '/about/'
-    weight = 30
+# If you want to use One Dollars Stats(https://onedollarstats.com/analytics) for analytics, add this section
+# [params.onedollarstats]
+# id = "data-site-id"
 
-[Languages.fr-fr.params]
-  sitename = "Awesome hugo blog"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Thème minimal pour blog Hugo avec prise en charge des modes clair et sombre"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# If you want to implement a Content-Security-Policy, add this section
+# [params.csp]
+# childsrc = ["'self'"]
+# fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
+# formaction = ["'self'"]
+# framesrc = ["'self'", "https://www.youtube.com"]
+# imgsrc = ["'self'"]
+# objectsrc = ["'none'"]
+# stylesrc = [
+#   "'self'",
+#   "'unsafe-inline'",
+#   "https://fonts.googleapis.com/",
+#   "https://cdn.jsdelivr.net/",
+# ]
+# scriptsrc = [
+#   "'self'",
+#   "'unsafe-inline'",
+#   "https://www.google-analytics.com",
+#   "https://cdn.jsdelivr.net/",
+# ]
+# prefetchsrc = ["'self'"]
+# # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
+# connectsrc = ["'self'", "https://www.google-analytics.com"]
 
-[Languages.fr-fr.params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "Un thème Hugo rapide et minimaliste avec un mode clair et sombre, pour un site personnel ou un blog."
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
 
-# Allow to override webmanifest options
-[Languages.fr-fr.params.webmanifest]
-  name = "sitename" # will use "params.sitename" or "title" by default
-  short_name = "sitename" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/CCrashZer0/"
 
-############################## German language ################################
-[Languages.de-de]
-  languageName = "German"
-  languageCode = "de-de"
-  contentDir = "content/de"
-  weight = 1
+# [[params.social]]
+# name = "Gitlab"
+# icon = "fa-brands fa-gitlab fa-2x"
+# weight = 2
+# url = "https://gitlab.com/johndoe/"
 
-  [Languages.de-de.menu]
-  [[Languages.de-de.menu.main]]
-    # The page reference (pageRef) is useful for menu highlighting
-    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-    pageRef="/"
-    name = 'Startseite'
-    url = '/'
-    weight = 10
-  [[Languages.de-de.menu.main]]
-    pageRef="posts"
-    name = 'Beiträge'
-    url = '/posts/'
-    weight = 20
-  [[Languages.de-de.menu.main]]
-    pageRef="about"
-    name = 'Über mich'
-    url = '/about/'
-    weight = 30
+[[params.social]]
+name = "Twitter"
+icon = "fa-brands fa-x-twitter fa-2x"
+weight = 3
+url = "https://x.com/CCrashZer0"
 
-[Languages.de-de.params]
-  sitename = "Awesome hugo blog"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Minimales Hugo-Blog-Theme mit hellem und dunklem Modus"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# [[params.social]]
+# name = "LinkedIn"
+# icon = "fa-brands fa-linkedin fa-2x"
+# weight = 4
+# url = "https://www.linkedin.com/in/johndoe/"
+#
+# [[params.social]]
+# name = "Medium"
+# icon = "fa-brands fa-medium fa-2x"
+# weight = 5
+# url = "https://medium.com/@johndoe"
+#
+# [[params.social]]
+# name = "RSS"
+# icon = "fa-solid fa-rss fa-2x"
+# weight = 6
+# url = "https://myhugosite.com/index.xml"
+# rel = "alternate"
+# type = "application/rss+xml"
 
-[Languages.de-de.params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "Ein schnelles, minimalistisches Hugo-Theme mit hellem und dunklem Modus, für eine persönliche Website oder Blog."
+[languages.en]
+languageName = ":en:"
 
-# Allow to override webmanifest options
-[Languages.de-de.params.webmanifest]
-  name = "sitename" # will use "params.sitename" or "title" by default
-  short_name = "sitename" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
 
-############################## Brazilian language ################################
-[Languages.pt-br]
-  languageName = "Brazilian"
-  languageCode = "pt-br"
-  contentDir = "content/br"
-  weight = 1
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
 
-  [Languages.pt-br.menu]
-  [[Languages.pt-br.menu.main]]
-    # The page reference (pageRef) is useful for menu highlighting
-    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
-    pageRef="/"
-    name = 'Início'
-    url = '/'
-    weight = 10
-  [[Languages.pt-br.menu.main]]
-    pageRef="posts"
-    name = 'Publicações'
-    url = '/posts/'
-    weight = 20
-  [[Languages.pt-br.menu.main]]
-    pageRef="about"
-    name = 'Sobre'
-    url = '/about/'
-    weight = 30
+[[languages.en.menu.main]]
+name = "Tutorials"
+weight = 3
+url = "tutorials/"
 
-[Languages.pt-br.params]
-  sitename = "Awesome hugo blog"
-  defaultColor = "dark" # set color mode: dark, light, auto
-  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
-  # the default value is set to 'auto'.
-  # You can take a look at layouts/index.html for more information.
-  description = "Um tema Hugo veloz e minimalista com suporte a modo claro e escuro para rodar um blog ou site pessoal"
-  mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
-  tocOpen = false # set to true to open table of contents by default
-  goToTop = true # set to false to disable 'go to top' button
-  additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatenated to one file `custom.js`.
-  # When building for production it will be minified.
-  # The file `custom.js` is loaded on each page (before body tag ends).
-  dateFormat = "2 January 2006" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
-  # See https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for available date formats.
-  rssFeedDescription = "summary" # available options: 1) summary 2) full
-  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
-  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
-  # By default (or if nothing is specified), summary is used.
+# [[languages.en.menu.main]]
+# name = "Contact me"
+# weight = 5
+# url = "contact/"
 
-[Languages.pt-br.params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
-  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "Um tema Hugo veloz e minimalista com suporte a modo claro e escuro para rodar um blog ou site pessoal"
-
-# Allow to override webmanifest options
-[Languages.pt-br.params.webmanifest]
-  name = "sitename" # will use "params.sitename" or "title" by default
-  short_name = "sitename" # same as name
-  start_url = "/" # will use homepage url by default
-  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
-  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
-  display = "standalone"
-
-###################################################################
-
-# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
-[params.browserconfig]
-  TileColor = "#2d89ef" # default windows 10 blue tile color
-
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/CCrashZer0"
-
-[[params.socialIcons]]
-name = "X"
-url = "https://x.com/CCrashZer0/status/1382535159564660740"
-
-# [[params.socialIcons]]
-# name = "Rss"
-# url = "/index.xml"
-
+# [languages.pt-br]
+# languageName = ":brazil:"
+# title = "João Ninguém"
+#
+# [languages.pt-br.params]
+# author = "João Ninguém"
+# info = "Full Stack DevOps e Mágico"
+# description = "Sítio pessoal de João Ninguém"
+# keywords = "blog,desenvolvedor,pessoal"
+#
+# [[languages.pt-br.menu.main]]
+# name = "Sobre"
+# weight = 1
+# url = "about/"
+#
+# [[languages.pt-br.menu.main]]
+# name = "Blog"
+# weight = 2
+# url = "posts/"
+#
+# [[languages.pt-br.menu.main]]
+# name = "Projetos"
+# weight = 3
+# url = "projects/"
+#
+# [[languages.pt-br.menu.main]]
+# name = "Contato"
+# weight = 5
+# url = "contact/"

