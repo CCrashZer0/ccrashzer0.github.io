@@ -1,6 +1,6 @@
 +++
 title = "Root Me"
-date = "2025-02-09"
+date = "2021-02-12"
 +++
 
 # Try Hack Me - RootMe

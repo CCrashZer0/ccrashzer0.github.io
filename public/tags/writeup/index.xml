@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorials on CCrashZer0</title>
-    <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/</link>
-    <description>Recent content in Tutorials on CCrashZer0</description>
+    <title>Writeup on CCrashZer0</title>
+    <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/writeup/</link>
+    <description>Recent content in Writeup on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Root Me</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</guid>
       <description>Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.&#xA;nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:&#xA;-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
-    </item>
-    <item>
-      <title>Lian Yu: TryHackMe Writeup</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</guid>
-      <description>Try Hack Me - Lian_Yu Link to heading A beginner level security challenge&#xA;Objectives Link to heading Deploy the VM and Start the Enumeration. What is the Web Directory you found? What is the file name you found? What is the FTP Password? What is the file name with SSH password? user.txt root.txt Recon, Scanning, and Enumeration Link to heading Once the VM has been launched I am going to start scanning the box.</description>
     </item>
   </channel>
 </rss>

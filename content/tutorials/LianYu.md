@@ -1,6 +1,6 @@
 +++
-title = 'Lian Yu'
-date = "2025-02-20"
+title = 'Lian Yu: TryHackMe Writeup'
+date = "2020-06-23"
 +++
 
 
