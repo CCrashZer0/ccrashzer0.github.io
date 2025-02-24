@@ -1,11 +1,10 @@
 +++
-title = "About me"
+title = "About CCrashZer0"
 date = "2025-02-03"
 draft = false
 authors = ["CCrashZer0"]
 +++
 
-# About CCrashZer0
 
 <!--{{< figure src="/images/avatar.png" width="400">}} <!--This works... DO NOT CHANGE!-->
 
