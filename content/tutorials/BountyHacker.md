@@ -1,7 +1,7 @@
 +++
 title = 'Bounty Hacker: TryHackMe Writeup'
 date = "2020-0-23"
-draft = true
+draft = false
 +++
 
 You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!
