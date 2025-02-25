@@ -78,7 +78,6 @@ After running this one-liner it drops down into a root shell.
 Now that it has been confirmed that our shell is root let's search for our root.txt file and the answer to `Question #7`.  
 {{< figure src="/images/BountyHacker/11.png"}}
 
-
 ---
 ## Congratulations you have just completed the Bounty Hacker from TryHackMe challenge!
 
