@@ -16,6 +16,13 @@
       <description>Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.&#xA;nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:&#xA;-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
     </item>
     <item>
+      <title>Bounty Hacker: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</guid>
+      <description>You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!&#xA;Recon Link to heading After we have deployed the room let&amp;rsquo;s take the IP address and plug it into our web browser and see if anything comes up. It looks like we have a hit. Ok it looks like the maker of this room is a Cowboy BeBop fan.</description>
+    </item>
+    <item>
       <title>Lian Yu: TryHackMe Writeup</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
