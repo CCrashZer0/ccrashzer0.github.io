@@ -1,6 +1,6 @@
 +++
 title = 'Bounty Hacker: TryHackMe Writeup'
-date = "2020-0-23"
+date = "2020-09-05"
 draft = false
 +++
 
