@@ -6,8 +6,15 @@
     <description>Recent content on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Website — A Dream Turned Reality</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/myfirstwebsite/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/myfirstwebsite/</guid>
+      <description>I’m still wrapping my head around this. The fact that I’ve successfully deployed my own website. This has been a long-standing goal of mine ever since I discovered the world of cyber security. Well it is finally time for me to carve out my own little corner of the internet. A space where I can share my thoughts, document what I’m working on, and dive into the research I’m passionate about.</description>
+    </item>
     <item>
       <title>NovaspiritTech</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/novaspirittech/</link>
@@ -65,6 +72,13 @@
       <description>Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.&#xA;nmap -sC -sV -T4 -A -oN nmap/result &amp;lt;IP&amp;gt; Breakdown:&#xA;-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.</description>
     </item>
     <item>
+      <title>Bounty Hacker: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</guid>
+      <description>You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!&#xA;Recon Link to heading After we have deployed the room let&amp;rsquo;s take the IP address and plug it into our web browser and see if anything comes up. It looks like we have a hit. Ok it looks like the maker of this room is a Cowboy BeBop fan.</description>
+    </item>
+    <item>
       <title>Lian Yu: TryHackMe Writeup</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
@@ -105,13 +119,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/projects/</guid>
       <description>Nada para ver aqui.. Circulando!</description>
-    </item>
-    <item>
-      <title>Test: TryHackMe Writeup</title>
-      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</guid>
-      <description>TryHackMe - Bounty Hacker Link to heading You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!&#xA;Recon Link to heading After we have deployed the room let&amp;rsquo;s take the IP address and plug it into our web browser and see if anything comes up. It looks like we have a hit.</description>
     </item>
   </channel>
 </rss>

@@ -161,9 +161,13 @@ Recon Link to heading After we have deployed the room let’s take the IP addres
 </h2>
 <p>After we have deployed the room let&rsquo;s take the IP address and plug it into our web browser and see if anything comes up.
 It looks like we have a hit.
-<img alt="webService" src="/images/BountyHacker/1.png" title="webService"><br>
+<figure><img src="/images/BountyHacker/1.png">
+</figure>
+
 Ok it looks like the maker of this room is a Cowboy BeBop fan. How about we check out the source code to see if there are any hints as to <code>Question #3</code>.</p>
-<p><img alt="source" src="/images/BountyHacker/2.png" title="source"><br>
+<p><figure><img src="/images/BountyHacker/2.png">
+</figure>
+
 There does not seem to be anything useful here&hellip; So let&rsquo;s move on to nmap and see it we can find anything else.</p>
 <hr>
 <h2 id="sacnning--enumeration">
@@ -184,29 +188,41 @@ There does not seem to be anything useful here&hellip; So let&rsquo;s move on to
 -T4: speed of nmap scan is 4/5 (personal preference of mine)
 
 -oN: Normal output to the file normal.file
-</code></pre><p><img alt="nmap" src="/images/BountyHacker/3.png" title="nmap"><br>
+</code></pre><p><figure><img src="/images/BountyHacker/3.png">
+</figure>
+
 Once I have my results of my scan the first port catches my attention.<br>
 It looks like there is an FTP service running and it allows <code>anonymous</code> logons.<br>
 Lets try and connect to this FTP.<br>
 <code>ftp &lt;$ip&gt;</code><br>
 The username is going to be anonymous.<br>
 Once I am logged in I checked to see what files where available.
-<img alt="ftp" src="/images/BountyHacker/4.png" title="ftp"><br>
+<figure><img src="/images/BountyHacker/4.png">
+</figure>
+
 It looks like there are two files for us. I am going to use the get command to download each of those files to my local computer.<br>
 Now that they are downloaded I can cat the content of task.txt. It seems like I now know who created the task list.. and just like that I now have the answer to <code>Question #3</code></p>
-<p><img alt="task" src="/images/BountyHacker/5.png" title="task"></p>
-<p>It is time to move on to <code>Question #4</code>. What service can you bruteforce with the text file found?<br>
+<p><figure><img src="/images/BountyHacker/5.png">
+</figure>
+
+It is time to move on to <code>Question #4</code>. What service can you bruteforce with the text file found?<br>
 The text file that TryHackMe is refering to is the locks.txt. When you examine the content of it you will see that it looks a lot like a password list.<br>
 Also if we refer back to our nmap scan there was only one service that really required a password and that was SSH. How about we try that and see&hellip; Congratulations you just found the answer to <code>Question #4</code>.</p>
 <p>Now I am going to use the locks.txt file and the name lin in combonation with Hydra to see if we are able to brute force any passwords.</p>
 <p>Hydra: <code>hydra -l lin -P locks.txt ssh://&lt;$ip&gt;</code><br>
-<img alt="hydra" src="/images/BountyHacker/6.png" title="hydra"><br>
+<figure><img src="/images/BountyHacker/6.png">
+</figure>
+
 It looks like this successful, now it is time to try and SSH in with our newly found credentials.</p>
 <p>SSH: <code>ssh lin@&lt;ip&gt;</code></p>
-<p><img alt="creds" src="/images/BountyHacker/7.png" title="creds"><br>
+<p><figure><img src="/images/BountyHacker/7.png">
+</figure>
+
 As soon as I am connected, let&rsquo;s start checked to see if we can fine <code>user.txt</code> file mentioned in <code>Question #6</code>.
 Right away the user.txt file can be found our present working directory.<br>
-<img alt="user" src="/images/BountyHacker/8.png" title="user"></p>
+<figure><img src="/images/BountyHacker/8.png">
+</figure>
+</p>
 <hr>
 <h2 id="privilege-escalation">
   Privilege Escalation
@@ -217,14 +233,20 @@ Right away the user.txt file can be found our present working directory.<br>
 </h2>
 <p>Now it is time for the fun to begin, we have compromised this box but we need to elavate out privileges from a stander user to a root users.<br>
 What we can do here is check and see what commands can be ran with sudo.<br>
-<img alt="sudo" src="/images/BountyHacker/9.png" title="sudo"><br>
+<figure><img src="/images/BountyHacker/9.png">
+</figure>
+
 Seems like I am able to run <code>/bin/tar</code> with sudo.<br>
 After checking Google and see if there are any know exploites. I came <a href="https://gtfobins.github.io/gtfobins/tar/"  class="external-link" target="_blank" rel="noopener">gtfobins</a> and it has a nice one-liner that we can use.</p>
 <p>Command: <code>sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh</code><br>
 After running this one-liner it drops down into a root shell.<br>
-<img alt="shell" src="/images/BountyHacker/10.png" title="shell"><br>
+<figure><img src="/images/BountyHacker/10.png">
+</figure>
+
 Now that it has been confirmed that our shell is root let&rsquo;s search for our root.txt file and the answer to <code>Question #7</code>.<br>
-<img alt="root" src="/images/BountyHacker/11.png" title="root"></p>
+<figure><img src="/images/BountyHacker/11.png">
+</figure>
+</p>
 <hr>
 <h2 id="congratulations-you-have-just-completed-the-bounty-hacker-from-tryhackme-challenge">
   Congratulations you have just completed the Bounty Hacker from TryHackMe challenge!

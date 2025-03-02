@@ -6,8 +6,15 @@
     <description>Recent content in Blog on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Website — A Dream Turned Reality</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/myfirstwebsite/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/myfirstwebsite/</guid>
+      <description>I’m still wrapping my head around this. The fact that I’ve successfully deployed my own website. This has been a long-standing goal of mine ever since I discovered the world of cyber security. Well it is finally time for me to carve out my own little corner of the internet. A space where I can share my thoughts, document what I’m working on, and dive into the research I’m passionate about.</description>
+    </item>
     <item>
       <title>NovaspiritTech</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/novaspirittech/</link>
