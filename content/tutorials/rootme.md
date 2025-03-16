@@ -1,5 +1,5 @@
 +++
-title = "Root Me"
+title = "Root Me: TryHackMe Writeup"
 date = "2021-02-12"
 +++
 

@@ -6,9 +6,8 @@ authors = ["CCrashZer0"]
 +++
 
 
-<!--{{< figure src="/images/avatar.png" width="400">}} <!--This works... DO NOT CHANGE!-->
+{{< figure src="/images/avatar.png" width="400">}} <!--This works... DO NOT CHANGE!-->
 
-A jack of all trades and a master of none, but often times better then a master of one. -- William Shakespeare
+Hi,I’m CCrashZer0, you could call me a cybersecurity enthusiast, ethical hacker, mentor, and maker. My passions run deep and wide, whether I’m diving into security research, developing scripts, or exploring the world of 3D printing. I love getting my down into the nitty-gritty of a new challange.
 
-This quote has always resonated with me and I find its perfect for introducing myself.
-Hi, I'm CCrashZer0, you could describe me as a cyber security enthusiast, ethical hacker, mentor, and maker. My passions has many depths, whether it's security research, developing scripts, 3d printing, or accepting a new challenges.  I’m always looking to expand my knowledge and skill set, so it isnt uncommon to find me listening to a podcast while I am in my lab solving challenges on platforms like TryHackMe or HackTheBox but you could just as easy find me jamming out to some music and tinkering with one of my 3d printers.
+I’m always on a mission to expand my knowledge and sharpen my skills. You’ll often find me in my lab, solving challenges on platforms like TryHackMe and HackTheBox — usually with a podcast playing in the background. But just as easily, you might catch me jamming to music while fine-tuning a 3D printer.

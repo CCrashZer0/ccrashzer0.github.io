@@ -27,7 +27,7 @@
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</link>
       <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/about/</guid>
-      <description>A jack of all trades and a master of none, but often times better then a master of one. &amp;ndash; William Shakespeare&#xA;This quote has always resonated with me and I find its perfect for introducing myself. Hi, I&amp;rsquo;m CCrashZer0, you could describe me as a cyber security enthusiast, ethical hacker, mentor, and maker. My passions has many depths, whether it&amp;rsquo;s security research, developing scripts, 3d printing, or accepting a new challenges.</description>
+      <description>Hi,I’m CCrashZer0, you could call me a cybersecurity enthusiast, ethical hacker, mentor, and maker. My passions run deep and wide, whether I’m diving into security research, developing scripts, or exploring the world of 3D printing. I love getting my down into the nitty-gritty of a new challange.&#xA;I’m always on a mission to expand my knowledge and sharpen my skills. You’ll often find me in my lab, solving challenges on platforms like TryHackMe and HackTheBox — usually with a podcast playing in the background.</description>
     </item>
     <item>
       <title>First Post</title>
@@ -65,7 +65,7 @@
       <description></description>
     </item>
     <item>
-      <title>Root Me</title>
+      <title>Root Me: TryHackMe Writeup</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/</guid>
@@ -77,6 +77,13 @@
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/bountyhacker/</guid>
       <description>You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!&#xA;Recon Link to heading After we have deployed the room let&amp;rsquo;s take the IP address and plug it into our web browser and see if anything comes up. It looks like we have a hit. Ok it looks like the maker of this room is a Cowboy BeBop fan.</description>
+    </item>
+    <item>
+      <title>Git Happens: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/githappens/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/githappens/</guid>
+      <description>Try Hack Me - GIT Happes Link to heading Boss wanted me to create a prototype, so here it is! We even used something called &amp;ldquo;version control&amp;rdquo; that made deploying this really easy! Link to heading Objective: Link to heading In this write up we only have one objective and that is to find the Super Secert Password.&#xA;Scanning, and Enumeration Link to heading The first thing that I am going to do after deploying the box is run an nmap scan.</description>
     </item>
     <item>
       <title>Lian Yu: TryHackMe Writeup</title>
