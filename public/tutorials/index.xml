@@ -30,6 +30,48 @@
       <description>Try Hack Me - GIT Happes Link to heading Boss wanted me to create a prototype, so here it is! We even used something called &amp;ldquo;version control&amp;rdquo; that made deploying this really easy! Link to heading Objective: Link to heading In this write up we only have one objective and that is to find the Super Secert Password.&#xA;Scanning, and Enumeration Link to heading The first thing that I am going to do after deploying the box is run an nmap scan.</description>
     </item>
     <item>
+      <title>Simple CTF: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/simplectf/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/simplectf/</guid>
+      <description>Try Hack Me - Simple CTF Link to heading Description: Beginner level ctf&#xA;Objectives Link to heading How many services are running under port 1000? What is running on the higher port? What&amp;rsquo;s the CVE you&amp;rsquo;re using against the application? To what kind of vulnerability is the application vulnerable? What&amp;rsquo;s the password? Where can you login with the details obtained? What&amp;rsquo;s the user flag? Is there any other user in the home directory?</description>
+    </item>
+    <item>
+      <title>Break out of the cage: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/cage/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/cage/</guid>
+      <description>Try Hack Me - Link to heading Help Cage bring back his acting career and investigate the nefarious goings on of his agent!&#xA;Objectives Link to heading What is Weston&amp;rsquo;s password? What&amp;rsquo;s the user flag? What&amp;rsquo;s the root flag? Recon Link to heading Let&amp;rsquo;s ping our maching and confirm that it is up and running.&#xA;Once you see a ping responces then take the IP address and plug it into your browser to see if their is a Ib service running.</description>
+    </item>
+    <item>
+      <title>Ignite: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/ignite/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/ignite/</guid>
+      <description>Try Hack Me - Ignite Link to heading A new start-up has a few issues with their web server.&#xA;Disclaimer - Your IP address will be different! Link to heading Objectives Link to heading Locate the User.txt&#xA;Locate the Root.txt&#xA;Scanning and Enumeration Link to heading We are going to start this with a simple nmap scan to see what ports are open.&#xA;Command: nmap -T4 -sC -sV -oN nmap\inital &amp;lt;ip&amp;gt; Command Breakdown:</description>
+    </item>
+    <item>
+      <title>Lazy Admin: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lazyadmin/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lazyadmin/</guid>
+      <description>Try Hack Me - LazyAdmin Link to heading Have some fun! There might be multiple ways to get user access. This is a TryHackMe box. To access this you must sign up to https://tryhackme.com/.&#xA;Disclaimer - Your IP address will be different! Link to heading Objective Link to heading What is the user flag? What is the root flag? Scanning and Enumeration Link to heading Command: nmap -sC -sV -oN nmap/intinal &amp;lt;ipaddress&amp;gt;</description>
+    </item>
+    <item>
+      <title>Pickle Rick: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/picklerick/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/picklerick/</guid>
+      <description>Try Hack Me - Pickle Rick Link to heading Today we are going to be attempting to complet the Pickel Rick from from Try Hack Me!&#xA;https://tryhackme.com/room/picklerick&#xA;Disclaimer - My IP address will be different from yours! Link to heading Scanning &amp;amp; Enumeration Link to heading A good rule of thumb is to start by scanning your machine for any open ports.&#xA;Command: nmap -T4 -sC -sV -A -p- 10.</description>
+    </item>
+    <item>
+      <title>Tom Ghost: TryHackMe Writeup</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/tomghost/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/tomghost/</guid>
+      <description>Try Hack Me - Tomghost Link to heading Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. This is a TryHackMe box. To access this you must sign up to https://tryhackme.com/.&#xA;Disclaimer - Your IP address will be different! Link to heading Scanning and Enumeration Link to heading We will start with running our nmap scan.&#xA;Command: nmap -A -T4 -sC -sV -oN nmap/initial.</description>
+    </item>
+    <item>
       <title>Lian Yu: TryHackMe Writeup</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/lianyu/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>

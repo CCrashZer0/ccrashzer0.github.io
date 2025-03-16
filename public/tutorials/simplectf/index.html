@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Simple CTF: TryHackMe Writeup · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Try Hack Me - Simple CTF Link to heading Description: Beginner level ctf
+Objectives Link to heading How many services are running under port 1000? What is running on the higher port? What&rsquo;s the CVE you&rsquo;re using against the application? To what kind of vulnerability is the application vulnerable? What&rsquo;s the password? Where can you login with the details obtained? What&rsquo;s the user flag? Is there any other user in the home directory?">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Simple CTF: TryHackMe Writeup">
+  <meta name="twitter:description" content="Try Hack Me - Simple CTF Link to heading Description: Beginner level ctf
+Objectives Link to heading How many services are running under port 1000? What is running on the higher port? What’s the CVE you’re using against the application? To what kind of vulnerability is the application vulnerable? What’s the password? Where can you login with the details obtained? What’s the user flag? Is there any other user in the home directory?">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/simplectf/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Simple CTF: TryHackMe Writeup">
+  <meta property="og:description" content="Try Hack Me - Simple CTF Link to heading Description: Beginner level ctf
+Objectives Link to heading How many services are running under port 1000? What is running on the higher port? What’s the CVE you’re using against the application? To what kind of vulnerability is the application vulnerable? What’s the password? Where can you login with the details obtained? What’s the user flag? Is there any other user in the home directory?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2020-08-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-08-06T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/simplectf/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/simplectf/">
+          Simple CTF: TryHackMe Writeup
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="try-hack-me---simple-ctf">
+  Try Hack Me - Simple CTF
+  <a class="heading-link" href="#try-hack-me---simple-ctf">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Description: Beginner level ctf</p>
+<hr>
+<h2 id="objectives">
+  Objectives
+  <a class="heading-link" href="#objectives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>How many services are running under port 1000?</li>
+<li>What is running on the higher port?</li>
+<li>What&rsquo;s the CVE you&rsquo;re using against the application?</li>
+<li>To what kind of vulnerability is the application vulnerable?</li>
+<li>What&rsquo;s the password?</li>
+<li>Where can you login with the details obtained?</li>
+<li>What&rsquo;s the user flag?</li>
+<li>Is there any other user in the home directory? What&rsquo;s its name?</li>
+<li>What can you leverage to spawn a privileged shell?</li>
+<li>What&rsquo;s the root flag?</li>
+</ol>
+<hr>
+<h2 id="recon">
+  Recon
+  <a class="heading-link" href="#recon">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Once the machine has been deployed we are going to take the IP address and plug it into our web browser to see if their is a webservice running on it.<br>
+<figure><img src="/images/SimpleCTF/webService.png">
+</figure>
+</p>
+<p>It seems that we do have a web service running but all we get is your stander Apache default screen.</p>
+<hr>
+<h2 id="scanning-and-enumeration">
+  Scanning, and Enumeration
+  <a class="heading-link" href="#scanning-and-enumeration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Now since one of our objectives it to find what is running on the higher port numbers we are going to scan all ports with the <code>-p-</code> switch.</p>
+<p>Command: <code>nmap -A -T4 -sC -sV -p- -Pn -oN nmap/results.txt &lt;ip&gt;</code>
+Command Breakdown:</p>
+<pre tabindex="0"><code>-A: do an extensive scan on these ports
+
+-T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+-sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+-sV: Attempts to determine the version of the service running on port
+
+-Pn: Disable host discovery. Port scan only.
+
+-oN: Normal output to the file normal.file
+</code></pre><figure><img src="/images/SimpleCTF/nmapResults.png">
+</figure>
+
+<p>Now that I have the nmap results we can see that there are three ports that are currently open.<br>
+Two of them are under the number of 1000 and one is above 1000.<br>
+So that allows us to answer both objects one and two.</p>
+<p>Now I will need to try and locate the CVE that we are going to use to compromise this box with.<br>
+In order to find the CVE that we are going to be using in this challenge I feel like I am going to need to do some more recon and look for additional directories.<br>
+This is where I fire up gobuster along with our <code>common.txt</code> file. This will search for you guessed it.. Common directory names.</p>
+<p>Command: <code>gbuster dir - u http://&lt;Maching_IP&gt; -t 40 -w /usr/shared/</code><br>
+Command Breakdown:</p>
+<pre tabindex="0"><code>-u: Full URL (including scheme), or base domain name.
+
+-t: Thread Usage, declare how mand thread you would like gobuster to use. (Default is 10)
+
+-w: Path to the wordlist used for brute forcing (use – for stdin)
+</code></pre><figure><img src="/images/SimpleCTF/gbResults.png">
+</figure>
+
+<p>It seems thate we have same additions, more specifical we have a directory called <code>simple</code>. Now if I plug that directory into my browser I am presented with a nice website talking about CMS Made Simple.
+At the bottom of this site I am given the version number. It seems that this CMS is running on version 2.2.8</p>
+<figure><img src="/images/SimpleCTF/CMS.png">
+</figure>
+
+<p>Now that I know that I am dealing with a CMS plateform I am going to use <code>searchsploit</code> to see if there are any know vulnerabilities for it.<br>
+The one that sticks out to me is a SQL Injection, it seems that it will work on CMS Made Simple version 2.2.10 and lower.</p>
+<figure><img src="/images/SimpleCTF/searchsploit.png">
+</figure>
+
+<h2 id="privilege-escalation">
+  Privilege escalation
+  <a class="heading-link" href="#privilege-escalation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Let&rsquo;s pull up Google and see if their is an CVE assocaited with the vulnerability.</p>
+<p>After a quick search using keywords such as <code>CMS Made Simple Exploite</code>. I was able to find something on exploite database and it looks like there is a CVE associate with it as well and just like that we have found the answer to object three and four.</p>
+<figure><img src="/images/SimpleCTF/google.png">
+</figure>
+
+<p>To exploit this vulnerability I can use the python script that is available. When running the script for the first time you will encounter and error. In order to correct the error you are going to need to use pip to install the termcolor module.<br>
+Command: <code>pip install termcolor</code></p>
+<p>Now that we have all of our additional modules installed we can run this exploit.<br>
+Notice that I am using a <a href="%27https://github.com/danielmiessler/SecLists%27" >SecList</a>. This is not part of Kail and you will need to download it sepratly!</p>
+<p>Command: <code>python expolit.py -u http://MACHINE_IP --crack -w /usr/share/wordlists/SecLists/Passwords/Common-Credentials/best110.txt</code></p>
+<figure><img src="/images/SimpleCTF/creds.png">
+</figure>
+
+<p>It seems that I have found login credentials and the answer to objective five.<br>
+Now if I recall there was an SSH port open, maybe we can use what we just found to try and login. I was able to connect using SSH.<br>
+This has also provided us with the answer to objective six!</p>
+<figure><img src="/images/SimpleCTF/ssh.png">
+</figure>
+
+<p>Once I am connected via SSH the first thing I am going to do is use the <code>ls</code> command and see what shows up. Just like that I have foudn the user flag and completed objective seven.</p>
+<figure><img src="/images/SimpleCTF/userFlag.png">
+</figure>
+
+<p>Objective eight states that there is another user on this challenge. So let&rsquo;s check the home directory and see who it is.<br>
+<figure><img src="/images/SimpleCTF/secUser.png">
+</figure>
+</p>
+<p>Now before I move any futher, I would like to check and see if I am able to run anything as root and without a password.<br>
+<figure><img src="/images/SimpleCTF/noRoot.png">
+</figure>
+</p>
+<p>Now it does not seem like it but I just found the answer to objective nine.</p>
+<hr>
+<h2 id="privilege-escalation-1">
+  Privilege Escalation
+  <a class="heading-link" href="#privilege-escalation-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>It looks like I am able to run vim as root. So the time has come for me to see if I can call a root shell from within vim.<br>
+The first thing that I do is use vim to create a test file.</p>
+<p>Command: <code>sudo vim test</code><br>
+Once my test file is opend up I now need to try and gain a shell. This can be done by pressing <code>ctrl + :</code> and then entering in <code>!sh</code>.<br>
+After running that command I am dropped into a root shell and with that access I am able to complete object ten!
+<figure><img src="/images/SimpleCTF/rootFlag.png">
+</figure>
+</p>
+<h1 id="congratulations-you-have-just-completed-the-simple-ctf-challenge">
+  Congratulations you have just completed the Simple CTF challenge!
+  <a class="heading-link" href="#congratulations-you-have-just-completed-the-simple-ctf-challenge">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
