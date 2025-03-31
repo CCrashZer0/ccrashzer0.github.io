@@ -4,6 +4,7 @@ date = "2025-02-09"
 tags = [
     "blog",
 ]
+draft = false
 +++
 
 February 4 was a day of silence and sorrow as I received the heartbreaking news that Don from NovaSpirit Tech had passed away after his battle with cancer.
