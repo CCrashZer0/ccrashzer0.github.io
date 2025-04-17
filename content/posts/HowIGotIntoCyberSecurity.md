@@ -1,7 +1,7 @@
 +++
 title = 'How I Got Into Cyber security - An accident turn into a career!'
 date = 2025-04-17
-draft = true
+draft = false
 tags = [ "blog",
 ]
 +++
