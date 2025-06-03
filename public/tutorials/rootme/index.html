@@ -13,9 +13,47 @@
 
 
 <meta name="author" content="CCrashZer0">
-<meta name="description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
-nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
--A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+<meta name="description" content="
+  Try Hack Me - RootMe
+  
+    
+    Link to heading
+  
+
+
+  A ctf for beginners, can you root me?
+
+  
+    
+    Link to heading
+  
+
+
+  Reconnaissance
+  
+    
+    Link to heading
+  
+
+
+
+Scan the machine, how many ports are open?
+Here is the nmap scann commands that I am going to be using.
+nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt;
+Breakdown:
+-A: do an extensive scan on these ports
+
+-sC: Scan with default NSE scripts. Considered useful for discovery and safe
+
+-sV: Attempts to determine the version of the service running on port
+
+-T4: speed of nmap scan is 4/5 (personal preference of mine)
+
+-oN: Normal output to the file normal.file
+
+
+What version of Apache is running?
+Let&rsquo;s review out nmap scans and see if we are able to find what version of Apache we are running.">
 <meta name="keywords" content="blog,developer,personal">
 
 
@@ -24,14 +62,14 @@ nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
   <meta name="twitter:title" content="Root Me: TryHackMe Writeup">
   <meta name="twitter:description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
 nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
--A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.file What version of Apache is running? Let’s review out nmap scans and see if we are able to find what version of Apache we are running.">
 
 <meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tutorials/rootme/">
   <meta property="og:site_name" content="CCrashZer0">
   <meta property="og:title" content="Root Me: TryHackMe Writeup">
   <meta property="og:description" content="Try Hack Me - RootMe Link to heading A ctf for beginners, can you root me? Link to heading Reconnaissance Link to heading Scan the machine, how many ports are open? Here is the nmap scann commands that I am going to be using.
 nmap -sC -sV -T4 -A -oN nmap/result &lt;IP&gt; Breakdown:
--A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.">
+-A: do an extensive scan on these ports -sC: Scan with default NSE scripts. Considered useful for discovery and safe -sV: Attempts to determine the version of the service running on port -T4: speed of nmap scan is 4/5 (personal preference of mine) -oN: Normal output to the file normal.file What version of Apache is running? Let’s review out nmap scans and see if we are able to find what version of Apache we are running.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="tutorials">
@@ -362,9 +400,6 @@ One we have verified that we are actually running as root we will just need to c
 
 
   
-  
-
-
 
   
 
