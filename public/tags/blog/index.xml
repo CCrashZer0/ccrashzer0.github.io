@@ -6,10 +6,17 @@
     <description>Recent content in Blog on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Website — A Dream Turned Reality</title>
+      <title>Sudo Gone Wrong: Critical Linux Vulnerability Puts Root Access at Risk</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/sudogonewrong/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/sudogonewrong/</guid>
+      <description>&lt;p&gt;In the world of Linux, if you want to do anything as the administrator, you would need to use the command &amp;ldquo;sudo&amp;rdquo;. This simple command possesses the power of a thousand suns and once used it will allow you to do anything with unfettered access.&lt;/p&gt;&#xA;&lt;p&gt;OK, well that might be an overexaggerating of the sudo command. However, according to a new security advisory from Rich Mirch at Stratascale&amp;rsquo;s Cyber Research Unit (CRU), there are not one but two critical vulnerabilities in Sudo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using AI to design, develop, and print my first maker coin!</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/maker-coin/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/maker-coin/</guid>
