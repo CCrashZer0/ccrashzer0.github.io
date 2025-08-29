@@ -6,8 +6,15 @@
     <description>Recent content in Blog on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Take Out The Trash: A CTF walkthrough</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/</guid>
+      <description>&lt;p&gt;Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.&lt;/p&gt;&#xA;&lt;p&gt;In order to discover our point of entrance we will first need to do a little bit of recon. This can be done by using the tool nmap. It comes standard in most pen testing distros. The command I like to use is &lt;code&gt;nmap -sC -sV -T4 -A &amp;lt;IP&amp;gt;&lt;/code&gt;. Based on the results, I can see this server has an FTP service running. It allows anonymous login, which should be our entry point.&#xA;The nmap results reveal an FTP server running with anonymous login enabled our potential entry point. So this should be the foothold that we have been looking for&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Sudo Gone Wrong: Critical Linux Vulnerability Puts Root Access at Risk</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/sudogonewrong/</link>

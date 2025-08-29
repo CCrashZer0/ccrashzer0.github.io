@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/CCrashZer0/ccrashzer0.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=CCrashZer0/ccrashzer0.github.io/livereload" data-no-instant defer></script>
+  <title>
+  Take Out The Trash: A CTF walkthrough · CCrashZer0
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="CCrashZer0">
+<meta name="description" content="Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.
+In order to discover our point of entrance we will first need to do a little bit of recon. This can be done by using the tool nmap. It comes standard in most pen testing distros. The command I like to use is nmap -sC -sV -T4 -A &lt;IP&gt;. Based on the results, I can see this server has an FTP service running. It allows anonymous login, which should be our entry point.
+The nmap results reveal an FTP server running with anonymous login enabled our potential entry point. So this should be the foothold that we have been looking for">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Take Out The Trash: A CTF walkthrough">
+  <meta name="twitter:description" content="Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.
+In order to discover our point of entrance we will first need to do a little bit of recon. This can be done by using the tool nmap. It comes standard in most pen testing distros. The command I like to use is nmap -sC -sV -T4 -A &lt;IP&gt;. Based on the results, I can see this server has an FTP service running. It allows anonymous login, which should be our entry point. The nmap results reveal an FTP server running with anonymous login enabled our potential entry point. So this should be the foothold that we have been looking for">
+
+<meta property="og:url" content="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/">
+  <meta property="og:site_name" content="CCrashZer0">
+  <meta property="og:title" content="Take Out The Trash: A CTF walkthrough">
+  <meta property="og:description" content="Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.
+In order to discover our point of entrance we will first need to do a little bit of recon. This can be done by using the tool nmap. It comes standard in most pen testing distros. The command I like to use is nmap -sC -sV -T4 -A &lt;IP&gt;. Based on the results, I can see this server has an FTP service running. It allows anonymous login, which should be our entry point. The nmap results reveal an FTP server running with anonymous login enabled our potential entry point. So this should be the foothold that we have been looking for">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-28T00:00:00+00:00">
+    <meta property="article:tag" content="Blog">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/CCrashZer0/ccrashzer0.github.io/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/">
+      CCrashZer0
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/tutorials/">Tutorials</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/CCrashZer0/ccrashzer0.github.io/projects/">Projects</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/">
+              Take Out The Trash: A CTF walkthrough
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-08-28T00:00:00Z">
+                August 28, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/CCrashZer0/ccrashzer0.github.io/authors/ccrashzer0/">CCrashZer0</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/CCrashZer0/ccrashzer0.github.io/tags/blog/">Blog</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.</p>
+<p>In order to discover our point of entrance we will first need to do a little bit of recon. This can be done by using the tool nmap. It comes standard in most pen testing distros. The command I like to use is <code>nmap -sC -sV -T4 -A &lt;IP&gt;</code>. Based on the results, I can see this server has an FTP service running. It allows anonymous login, which should be our entry point.
+The nmap results reveal an FTP server running with anonymous login enabled our potential entry point. So this should be the foothold that we have been looking for</p>
+<p>We will connect to the FTP using <code>ftp &lt;IP ADDRESS&gt;</code>. When prompted for a username, we&rsquo;ll use &lsquo;anonymous&rsquo;. No password is needed as it logs us directly into the application. When I try to list the directory, I get a message saying &ldquo;Entering Extended Passive Mode&rdquo;. I had never seen this before, so I researched the issue and found a solution. Simply typing <code>passive</code> disables passive mode. This allows you to use commands like <code>ls</code> to list the directory.</p>
+<p>After successfully running <code>ls</code>, you can see two files. One is called &ldquo;file.txt&rdquo;. The other appears to be a JPG image with a long string of letters and numbers as its name. Let&rsquo;s go ahead and download each of these files using the get command. We&rsquo;ll use <code>get file.txt</code> to retrieve the text file. We&rsquo;ll repeat the same command to download the JPG image.</p>
+<p>Now that we have both files saved to our desktop, let&rsquo;s examine them for useful information. Upon opening the file.txt we see that it appears to be a note from the admin to a user by the name of CCrashZer0. So now we know of at least one user that is on this system.</p>
+<p>Let&rsquo;s take a look at the second file that we got. It appears to be an image, but it has an unusual name. Notice the two equal signs at the end—this is called padding. You&rsquo;ll see this frequently with base64 encoded strings. If we use a tool like CyberChef we can easily decode this string. Once decoded, the string still appears scrambled with letters, numbers, and symbols. We&rsquo;ll return to this later, so note the decoded string for now.</p>
+<p>Remember that image that we found. Let&rsquo;s take a closer look at it. We are going to use an application called Steghide. Using this application we can check and see if there was anything hidden inside it. We&rsquo;ll use the command <code>steghide extract -sf &lt;ImageName&gt;.jpg</code>. After running this, we&rsquo;re prompted for a passphrase. Let&rsquo;s try that random string we decoded earlier to see if it works as a password. Using that string successfully extracts a file called <code>list.txt</code>. Examining its contents reveals it&rsquo;s a password list.</p>
+<p>With the list that we just acquired and the fact that we know the name of the user thanks to the note we found earlier we can now try and brute force the password using the Hydra application. We&rsquo;ll run <code>hydra -l userName -P list.txt &lt;IP Address&gt; ssh -t 4</code>. Hydra will try each password in the list until it finds a match or exhausts all options. In our case we do find the password using the list that we find.</p>
+<p>Now we can SSH into the target machine using <code>ssh userName@ipAddress</code>. After entering the password, we establish a connection. So lets see what we are able to find now. Running <code>ls</code> immediately shows a &ldquo;user.txt&rdquo; file. Let&rsquo;s read it with the <code>cat</code> command. Success! We now have the user flag.</p>
+<p>Now we only have one flag let to find and that is the root flag. So the question becomes at this point how are we going to escalate our privileges. We need something that will allow us to become the root user. There are several ways to escalate privileges. The easiest is to start with <code>sudo -l</code>. This shows what we can run as sudo. We have access to two things. A script called &ldquo;EmptyTrash.sh&rdquo; and nano, how about we look at this script that we have access to. Close inspection reveals this script just empties the trash on the host machine. However, we also have access to the nano text editor. This means we could edit the script to include a reverse shell.</p>
+<p>Let&rsquo;s head over to payload all the things and pick out a reverse shell. I am going to use the bash shell but you can use whatever you wanted to. Once we set up the commands and change the IP address to match our attacking machine, we need to set up a listener. On our attacker device, we&rsquo;ll use <code>nc -u -lvp &lt;port&gt;</code>.</p>
+<p>Everything is set up. Now we need to execute our plan and see if the reverse shell connects to our listener. Back on the victim machine, let&rsquo;s navigate to the empty trash script&rsquo;s directory. Once there will execute the script with <code>./EmptyTrash.sh</code>. Looking back at our attacker machine we can see that our listener has caught something. When we run <code>whoami</code> we can see that the prompt comes back with root&hellip; Congratulation we have root access.</p>
+<p>Now we need to find the root flag. Similar to when we were looking for the user flag we wanted to use the <code>ls</code> command to see what all we have around us and look at that there is the root.txt files that contains our flag. We are going to use <code>cat</code> again to read the flag and there it is.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     CCrashZer0 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/CCrashZer0/ccrashzer0.github.io/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
