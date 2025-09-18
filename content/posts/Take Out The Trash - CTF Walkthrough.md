@@ -1,8 +1,10 @@
 ---
-title: "Take Out The Trash - CTF Walkthrough"
-date: 2025-09-01T14:34:50.223Z
-draft: false
-tags: []
+title = "Take Out The Trash - CTF Walkthrough"
+date = 2025-09-01T14:34:50.223Z
+draft = false
+tags = [
+    "blog",
+]
 ---
 
 Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.
