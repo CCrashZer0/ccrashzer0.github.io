@@ -1,11 +1,11 @@
----
-title = When Trust Becomes a Weapon - The September 2025 NPM Crisis
++++
+title = "When Trust Becomes a Weapon - The September 2025 NPM Crisis"
 date = 2025-09-17T23:56:06.429Z
 draft = false
 tags = [
     "blog",
 ]
----
++++
 
 One of npm's most sophisticated supply chain attacks unfolded on September 8, 2025, sending shortwaves through the JavaScript development community. The "Shai-Hulud" attack compromised over 180 packages, including popular libraries like `chalk`, `debug`, and `ansi-styles` that see billions of downloads combined.
 
