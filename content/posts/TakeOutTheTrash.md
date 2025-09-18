@@ -1,11 +1,11 @@
----
-title = "Take Out The Trash - CTF Walkthrough"
-date = 2025-09-01T14:34:50.223Z
-draft = false
++++
+authors = ["CCrashZer0"]
+title = "Take Out The Trash: A CTF walkthrough"
+date = "2025-08-28"
 tags = [
     "blog",
 ]
----
++++
 
 Take out the trash is a boot2root style CTF challenge. Your objective here is to compromise a user account and then determine the best path to take in order to escalate your privileges to the root user and retrieve the root flag.
 
@@ -33,3 +33,4 @@ Let's head over to payload all the things and pick out a reverse shell. I am goi
 Everything is set up. Now we need to execute our plan and see if the reverse shell connects to our listener. Back on the victim machine, let's navigate to the empty trash script's directory. Once there will execute the script with `./EmptyTrash.sh`. Looking back at our attacker machine we can see that our listener has caught something. When we run `whoami` we can see that the prompt comes back with root... Congratulation we have root access.
 
 Now we need to find the root flag. Similar to when we were looking for the user flag we wanted to use the `ls` command to see what all we have around us and look at that there is the root.txt files that contains our flag. We are going to use `cat` again to read the flag and there it is.
+
