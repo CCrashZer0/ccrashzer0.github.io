@@ -6,8 +6,22 @@
     <description>Recent content in Posts on CCrashZer0</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Oct 2025 22:34:08 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Pick the Proper VPN for You</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/how-to-pick-the-proper-vpn-for-you/</link>
+      <pubDate>Sun, 26 Oct 2025 22:34:08 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/how-to-pick-the-proper-vpn-for-you/</guid>
+      <description>&lt;p&gt;Choosing the right VPN in 2025 starts with understanding your primary needs. The best VPN isn&amp;rsquo;t determined by a single factor,instead, consider security features, connection speeds, privacy protections, server network size, ease of use, and cost. If you&amp;rsquo;re primarily streaming content or working remotely, prioritize providers with extensive server networks and fast speeds that won&amp;rsquo;t buffer during video calls or entertainment. Security-conscious users should look for AES-256 encryption, independently audited no-logs policies, and additional features like kill switches that prevent data exposure if your connection drops. Business users need robust management features and reliable customer support, while privacy advocates should consider providers based in privacy-friendly jurisdictions like Switzerland or Panama that offer better protection against government surveillance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When Trust Becomes a Weapon - The September 2025 NPM Crisis</title>
+      <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/when-trust-becomes-a-weapon---the-september-2025-npm-crisis/</link>
+      <pubDate>Wed, 17 Sep 2025 23:56:06 +0000</pubDate>
+      <guid>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/when-trust-becomes-a-weapon---the-september-2025-npm-crisis/</guid>
+      <description>&lt;p&gt;One of npm&amp;rsquo;s most sophisticated supply chain attacks unfolded on September 8, 2025, sending shortwaves through the JavaScript development community. The &amp;ldquo;Shai-Hulud&amp;rdquo; attack compromised over 180 packages, including popular libraries like &lt;code&gt;chalk&lt;/code&gt;, &lt;code&gt;debug&lt;/code&gt;, and &lt;code&gt;ansi-styles&lt;/code&gt; that see billions of downloads combined.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-made-this-attack-different&#34;&gt;&#xA;  What Made This Attack Different&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-made-this-attack-different&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unlike typical supply chain attacks that target individual packages, Shai-Hulud exhibited worm-like behavior. It automatically propagated across the ecosystem by focusing on stealing developer credentials and using them to publish new malicious packages. This self-replicating nature turned a single compromised account into an ecosystem-wide security incident.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Take Out The Trash: A CTF walkthrough</title>
       <link>http://localhost:1313/CCrashZer0/ccrashzer0.github.io/posts/takeoutthetrash/</link>
